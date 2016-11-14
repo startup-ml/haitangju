@@ -1,0 +1,40 @@
+<div class="left">
+<div class="cpMu">
+  <h4><a href='javascript:void(0)'>{dede:field.typeid runphp='yes'}$ID = @me; $sql = "SELECT * FROM `dede_arctype` WHERE id=$ID";$query = mysql_query($sql);$row=mysql_fetch_array($query); $relID = "$row[reid]"; if($relID == 0) {@me = $row[typename];}else{$sql = "SELECT `typename` FROM `dede_arctype` WHERE id=$relID";$query = mysql_query($sql);$row=mysql_fetch_array($query); @me = $row[typename];}{/dede:field.typeid}</a></h4>
+  <div class="cpMuCont">
+    <ul>
+      {dede:channel type='son' currentstyle="
+      <li class='cur'><a href='~typelink~' class='thisclass'>~typename~</a></li>
+      "}
+      <li sid='0001,0011'><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <p>您只需一个电话我们将提供最合适的产品，让您花最少的钱，达到最好的效果</p>
+    <dl class="mu_phone">
+      <dt>全国统一服务热线</dt>
+      <dd>{dede:global.cfg_tel/}</dd>
+    </dl>
+  </div>
+</div>
+<h4 class="t05">相关资讯</h4>
+<div class='t05_cons1'>
+<ul>
+{dede:arclist titlelen=60 row=10 typeid='34'}
+<li><a href='[field:arcurl/]' title='[field:title/]'>[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+<div class="clear"></div>
+</div>
+<div class="contactn mt10 mb10 mb10">
+  <div class="t05">
+    <h4>{dede:type typeid='44'}<a class="yan2" href="[field:typelink /]">联系我们</a>{/dede:type}</h4>
+  </div>
+  <div class="subnr"> <img src="/skin/images/catactus.jpg">
+    <p> <span style="font-size: 12px;">咨询热线：</span></p>
+    <p style="font-size: 20px; color: #546a85;"> {dede:global.cfg_tel/}</p>
+    <p> <span>邮箱：</span>{dede:global.cfg_yx/}</p>
+    <p><span>地址：</span>{dede:global.cfg_dz/}</p>
+    <p></p>
+  </div>
+</div>
+</div>

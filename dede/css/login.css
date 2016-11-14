@@ -1,0 +1,96 @@
+* {
+ margin:0;
+ padding:0;
+}
+
+body {
+ background:#161616 url('../assets/rep.png') 0 0 repeat-x;
+ font-family: Arial, Tahoma, sans-serif;
+ color:#ccc;
+}
+
+#container {
+ width:960px;
+ clear:both;
+ float:none;
+ margin:0 auto;
+ padding-top:250px;
+}
+
+h1 {
+ text-align:center;
+ color:#fff;
+}
+
+#container #box {
+ clear:both;
+ float:none;
+ width:70%;
+ margin:80px auto;
+}
+
+p.main label {
+ float:left;
+ padding:5px;
+ display:inline;
+ margin-left:40px;
+ font-size:13px;
+ color:#fff;
+ margin-right:10px;
+}
+
+#box p {
+ clear:both;
+ float:none;
+ width:100%;
+}
+
+p.main INPUT {
+ padding:5px;
+ background:#444;
+ color:#aaa;
+ border:1px solid #111;
+ width:100px;
+ float:left;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+
+input.login {
+ float:right;
+ width:76px;
+ height:24px;
+ background:url('../assets/greenrep.png') 0 0 repeat-x;
+ color:#fff;
+ border:1px solid #005fa4;
+ padding:0;
+
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+ display:inline;
+ margin-right:6px;
+}
+
+span {
+ font-size:13px;
+ color:#aaa;
+}
+
+.space {
+ padding-top:15px;
+}
+
+span input {
+ margin-left:125px;
+ margin-right:5px;
+ border:1px solid #111;
+ background:#444;
+ color:#fff;
+}
+
+#vdimgck{
+	position:absolute;
+	margin-left:10px;
+	margin-top:2px;
+	height:23px;	
+}

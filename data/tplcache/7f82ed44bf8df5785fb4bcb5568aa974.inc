@@ -1,0 +1,1 @@
+<a href="list.php?tid=[field:id/]">了解更多 &gt;&gt; </a>

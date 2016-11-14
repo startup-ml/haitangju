@@ -1,0 +1,5 @@
+INSERT INTO `dede_plus_changyan_setting` VALUES('appid','0','0');
+INSERT INTO `dede_plus_changyan_setting` VALUES('id','0','0');
+INSERT INTO `dede_plus_changyan_setting` VALUES('isv_id','0','0');
+INSERT INTO `dede_plus_changyan_setting` VALUES('user','0','0');
+INSERT INTO `dede_plus_changyan_setting` VALUES('pwd','0','0');

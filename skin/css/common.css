@@ -1,0 +1,362 @@
+﻿/* AB模版网 做最好的织梦整站模板下载网站 */
+/* 网址：Www.AdminBuy.Cn */
+/* 图标大全：Sc.AdminBuy.Cn 专业建站素材网站 */
+/* QQ：9490489 */
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #fff;
+	overflow-x: hidden;
+	color: #666;
+	font-size: 12px;
+	font-family: microsoft yahei, "宋体";
+	position: relative;
+}/*网站字体颜色*/
+a {
+	color: #666;
+	text-decoration: none;
+}  /*for ie f6n.net*/
+a:focus {
+	outline: 0;
+} /*for ff f6n.net*/
+a:hover {
+	text-decoration: underline;
+}
+.vam {
+	vertical-align: middle;
+}
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+p {
+	word-spacing: -1.5px;
+}
+.tr {
+	text-align: right;
+}
+.tl {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.pa {
+	position: absolute;
+}
+.pr {
+	position: relative
+}
+/* -- 购物车外部框架 -- */
+.cart_header, .cart_content, .cart_footer {
+	width: 980px;
+	margin: 0 auto;
+}
+/* -- 页面整体布局 -- */
+.header, .content, .footer {
+	width: 1000px;
+	margin: 0 auto;
+	font-family: microsoft yahei;
+}
+.left {
+	width: 210px;
+	float: left;
+	overflow: hidden;
+}
+.left2 {
+	width: 690px;
+	float: left;
+	overflow: hidden;
+}
+.left3 {
+	width: 754px;
+	float: left;
+	overflow: hidden;
+	color: #666;
+}
+.lefttop {
+	background: url(../images/left_top_img.gif) no-repeat;
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.left2top {
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+}
+.leftbot {
+	background: url(../images/left_bot_img.gif) no-repeat;
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.left2bot {
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.rightbot {
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.right {
+	width: 764px;
+	float: right;
+	display: inline;
+	overflow: hidden;
+}
+.right2 {
+	width: 275px;
+	float: right;
+	overflow: hidden;
+}
+.right3 {
+	width: 201px;
+	float: right;
+	overflow: hidden;
+	color: #666;
+}
+.right2top {
+	background: url(../images/right2_top_img.gif) no-repeat;
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+}
+.right2bot {
+	background: url(../images/left_bot2_img.gif) no-repeat;
+	height: 3px;
+	font-size: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.right_main {
+	width: 762px;
+	min-height: 458px;
+	border: solid 1px #d5d5d5;
+	padding-bottom: 15px;
+	overflow: hidden;
+	background: #fff;
+}
+.right2_main {
+	width: 273px;
+	border: solid 1px #d5d5d5;
+	border-top: 0;
+	padding-bottom: 15px;
+	overflow: hidden;
+	background: #fff
+}
+.left2_main {
+	width: 688px;
+	border: solid 1px #d5d5d5;
+	padding-bottom: 15px;
+	overflow: hidden;
+	background: #fff;
+}
+ .h_nav li a:-webkit-any-link {
+display:block;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+/*页眉*/
+.header {
+	width: 100%;
+	height: 217px;
+	overflow: hidden;
+	background: url(../images/headerbg.png) no-repeat center;
+}
+/*--顶部链接导航*/
+.hd_top {
+}
+.hd_top .container {
+	height: 37px;
+	line-height: 37px;
+	color: #8a8a8a;
+}
+.hd_top em {
+}
+.hd_top a {
+	padding: 0 10px;
+	color: #8a8a8a;
+}
+/*--页眉内容*/
+.hd_cont {
+	position: relative;
+	height: 122px;
+}
+.hd_cont .hd_logo {
+	position: absolute;
+	left: 0;
+	top: 20px;
+}
+.hd_cont .hd_logo dd {
+	margin-left: 35px;
+	padding-top: 21px;
+}
+.hd_cont .hd_logo dd h2 {
+	font-size: 20px;
+	line-height: 30px;
+	color: #666;
+}
+.hd_cont .hd_logo dd p {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #3d3d3d;
+}
+.hd_cont .hd_logo dd p span {
+	margin-right: 10px;
+}
+.hd_cont .hd_logo dd p span em {
+	margin-right: 6px;
+	font-size: 18px;
+	color: #c0c0c0;
+}
+.hd_cont .dh_phone {
+	padding-top: 4px;
+	padding-left: 36px;
+	margin-top: 40px;
+	background: url(../images/hdphoen_ico.png) no-repeat left center;
+	color: #a1a1a1;
+}
+.hd_cont .dh_phone dd {
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #546a85;
+}
+/*--导航栏*/
+.dh_nav {
+}
+.dh_nav>ul {
+	height: 58px;
+}
+.dh_nav>ul>li {
+	position: relative;
+	float: left;
+	padding-left: 4px;
+	white-space: nowrap;
+	word-break: break-all;
+	background: url(../images/dh.jpg) no-repeat left;
+}
+.dh_nav>ul>li.home {
+	background: none
+}
+.dh_nav>ul>li>a {
+	display: block;
+	padding: 0 32px;
+	height: 58px;
+	line-height: 58px;
+	font-size: 14px;
+	color: #fff;
+	font-family: microsoft yahei;
+	text-decoration: none;
+}
+.dh_nav>ul>li>a.navHome {
+	padding: 0 22px;
+	background-image: none;
+}
+.dh_nav>ul>li>a.cur, .dh_nav>ul>li:hover>a {
+	background: url(../images/navlih.png) repeat-x center bottom;
+}
+/*.dh_nav>ul>li ul{position:absolute; top:58px; left:0px; padding-bottom:10px; display:none; width:100%; background-color:#046640;}
+.dh_nav>ul>li ul li{margin:0px 10px; height:35px; line-height:35px; overflow:hidden; text-align:center; border-top:1px dashed #8bb1a2;}
+.dh_nav>ul>li ul li.noBt{border-top:none;}
+.dh_nav>ul>li ul li a{color:#fff; font-size:14px;}
+.dh_nav>ul>li:hover ul{display:block;}*/
+
+
+/*友情链接*/
+.yqlj {
+	margin-top: 10px;
+	overflow: hidden;
+}
+.yqlj h4 img {
+}
+.yqlj p {
+	margin-left: 80px;
+	line-height: 48px;
+	height: 48px;
+	overflow: hidden;
+}
+.yqlj p a {
+	display: inline-block;
+	padding: 0 22px;
+	font-size: 13px;
+	color: #222;
+	background: url(../images/yqljbr.png) no-repeat right center;
+}
+/*页尾*/
+.footWrap {
+	background-color: #008CE1;
+}
+.footer {
+	position: relative;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	overflow: hidden;
+}
+.footer .ewmImg {
+	position: absolute;
+	left: 20px;
+	top: 100px;
+}
+.fotBai {
+	padding: 0px;
+}
+.fotNav {
+	height: 52px;
+	line-height: 52px;
+	color: #222;
+	text-align: center;
+	background: url(../images/fotnavbg.png) repeat-x center;
+}
+.fotNav a {
+	padding: 0 22px;
+	font-size: 14px;
+	color: #fff;
+	background: url(../images/fotnavbr.png) no-repeat right center;
+}
+.fotNav a.noBg {
+	background: none;
+}
+.fotTxt {
+	padding-left: 228px;
+	padding-bottom: 20px;
+	margin-top: 38px;
+	line-height: 30px;
+	font-size: 13px;
+	color: #fff;
+}
+.fotTxt a {
+	color: #fff;
+}
+.fotPhone {
+	position: absolute;
+	left: 730px;
+	top: 130px;
+	padding-left: 50px;
+	font-size: 13px;
+	color: #fff;
+	background: url(../images/fotphoen_ico.png) no-repeat left center;
+}
+.fotPhone dd {
+	line-height: 26px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #546a85;
+}

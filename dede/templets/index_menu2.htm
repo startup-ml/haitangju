@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $cfg_webname; ?>-<?php echo $cfg_softname." ".$cfg_version; ?></title>
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/invalid.css" type="text/css" media="screen" />	
+<script language="javascript" src="js/jquery.min.js" type="text/javascript"></script>	
+<script type="text/javascript" src="js/admin.jquery.configuration.js"></script>
+<script src="js/frame.js" language="javascript" type="text/javascript"></script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {
+	font-size: 12px;
+	color: #000000;
+}
+.STYLE5 {font-size: 12}
+.STYLE7 {font-size: 12px; color: #FFFFFF; }
+-->
+</style>
+
+
+</head>
+<body>
+<div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
+<div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
+
+		
+			<h1 id="sidebar-title"><a href="#">信息管理系统</a></h1>
+		  
+			<!-- Logo (221px wide) -->
+			<a href="./"><img id="logo" src="images/logo.png" alt="zcncms logo" /></a>
+			<!-- Sidebar Profile links -->
+			<div id="profile-links">
+				Hello, <?php echo $cuserLogin->getUserName(); ?>				<br />
+				<a href="sys_cache_up.php" title="清理缓存" target="main">清理缓存</a> | <!--<a href="./" title="前台首页">后台首页</a> |  --><a href="/index.php?upcache=1" title="前台首页" target="_blank">前台首页</a> | <a href="exit.php" title="退出" target="_parent">退出</a> 
+			</div>        
+			
+			<ul id="main-nav">  <!-- Accordion Menu -->
+				
+				<li>
+					<a id="index_body" href="index_body.php" class="nav-top-item no-submenu current" target="main"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
+						管理首页
+					</a>                                                          
+				</li>
+				
+				<li> 
+					<a id="articles" href="javascript:void(0);" class="nav-top-item"> 
+					常用操作
+					</a>
+					<ul>
+                        <li><a class="nav-bottom-item" id="article_add" href="article_add.php" target="main">添加文章</a></li>
+						<li><a class="nav-bottom-item" id="catalog_main" href="catalog_main.php" target="main">网站栏目管理</a></li>
+						<li><a class="nav-bottom-item" id="content_list" href="content_list.php" target="main">所有档案列表</a></li>
+                        <li><a class="nav-bottom-item" id="feedback_main" href="feedback_main.php" target="main">评论管理</a></li>
+                        <li><a class="nav-bottom-item" id="recycling" href="recycling.php" target="main">内容回收站</a></li>
+					</ul>
+				</li>
+                <li>
+					<a id="sys" href="javascript:void(0);" class="nav-top-item">
+						系统设置
+					</a>
+					<ul>
+                    	<li><a class="nav-bottom-item" id="sys_update" href="sys_update.php" target="main">系统更新</a></li>
+						<li><a class="nav-bottom-item" id="sys_info" href="sys_info.php" target="main">系统基本参数</a></li>
+						<li><a class="nav-bottom-item" id="sys_admin_user" href="sys_admin_user.php" target="main">系统用户管理</a></li><!--可考虑增加类型管理 -->
+						<li><a class="nav-bottom-item" id="sys_group" href="sys_group.php" target="main">用户组设定</a></li>
+						<li><a class="nav-bottom-item" id="sys_multiserv" href="sys_multiserv.php" target="main">服务器分布/远程</a></li>
+						<li><a class="nav-bottom-item" id="log_list" href="log_list.php" target="main">系统日志管理</a></li>
+						<li><a class="nav-bottom-item" id="sys_safe" href="sys_safe.php" target="main">验证安全设置</a></li>
+						<li><a class="nav-bottom-item" id="sys_info_mark" href="sys_info_mark.php" target="main">图片水印设置</a></li>
+						<li><a class="nav-bottom-item" id="content_att" href="content_att.php" target="main">自定义文档属性</a></li>
+						<li><a class="nav-bottom-item" id="soft_config" href="soft_config.php" target="main">软件频道设置</a></li>
+
+						<li><a class="nav-bottom-item" id="sys_task" href="sys_task.php" target="main">计划任务管理</a></li>
+						<li><a class="nav-bottom-item" id="sys_data" href="sys_data.php" target="main">数据库备份/还原</a></li>
+						<li><a class="nav-bottom-item" id="sys_sql_query" href="sys_sql_query.php" target="main">SQL命令行工具</a></li>
+                                                                                                                                                                                                
+					</ul>
+				</li>
+                <li>
+					<a id="makehtml" href="javascript:void(0);" class="nav-top-item">
+						HTML更新
+					</a>
+					<ul>
+						<li><a class="nav-bottom-item" id="makehtml_all" href="makehtml_all.php" target="main">一键更新网站</a></li>
+						<li><a class="nav-bottom-item" id="sys_cache_up" href="sys_cache_up.php" target="main">更新系统缓存</a></li>
+						<li><a class="nav-bottom-item" id="makehtml_homepage" href="makehtml_homepage.php" target="main">更新主页HTML</a></li>
+						<li><a class="nav-bottom-item" id="makehtml_list" href="makehtml_list.php" target="main">更新栏目HTML</a></li>
+                        <li><a class="nav-bottom-item" id="makehtml_archives" href="makehtml_archives.php" target="main">更新文档HTML</a></li>
+                        <li><a class="nav-bottom-item" id="makehtml_map_guide" href="makehtml_map_guide.php" target="main">更新网站地图</a></li>
+                        <li><a class="nav-bottom-item" id="makehtml_rss" href="makehtml_rss.php" target="main">更新RSS文件</a></li>
+                        <li><a class="nav-bottom-item" id="makehtml_js" href="makehtml_js.php" target="main">获取JS文件</a></li>
+                        <li><a class="nav-bottom-item" id="makehtml_spec" href="makehtml_spec.php" target="main">更新专题HTML</a></li>
+					</ul>
+				</li>
+                <li> 
+						<a id="plus" href="javascript:void(0);" class="nav-top-item"> 
+						辅助插件						</a>
+						<ul>
+													<li><a class="nav-bottom-item" id="plus_main" href="plus_main.php" target="main">插件管理器</a></li>
+														<li><a class="nav-bottom-item" id="ad_main" href="ad_main.php" target="main">广告管理</a></li>
+														<li><a class="nav-bottom-item" id="friendlink_main" href="friendlink_main.php" target="main">友情链接</a></li>
+														<li><a class="nav-bottom-item" id="vote_main" href="vote_main.php" target="main">投票模块</a></li>
+													</ul>
+						</li>
+				<!--<li> 
+					<a id="articles" href="javascript:void(0);" class="nav-top-item"> 
+					内容管理
+					</a>
+					<ul>
+<?php                    
+//载入可发布频道
+$addset = '';
+
+//检测可用的内容模型
+if($cfg_admin_channel = 'array' && count($admin_catalogs) > 0)
+{
+    $admin_catalog = join(',', $admin_catalogs);
+    $dsql->SetQuery(" SELECT channeltype FROM `#@__arctype` WHERE id IN({$admin_catalog}) GROUP BY channeltype ");
+}
+else
+{
+    $dsql->SetQuery(" SELECT channeltype FROM `#@__arctype` GROUP BY channeltype ");
+}
+$dsql->Execute();
+$candoChannel = '';
+while($row = $dsql->GetObject())
+{
+    $candoChannel .= ($candoChannel=='' ? $row->channeltype : ','.$row->channeltype);
+}
+if(empty($candoChannel)) $candoChannel = 1;
+$dsql->SetQuery("SELECT id,typename,addcon,mancon FROM `#@__channeltype` WHERE id IN({$candoChannel}) AND id<>-1 AND isshow=1 ORDER BY id ASC");
+$dsql->Execute();
+while($row = $dsql->GetObject())
+{
+
+    $addset .="<li><a class='nav-bottom-item' href='{$row->mancon}?channelid={$row->id}' target='main'>{$row->typename}</a></li>";
+}       
+echo $addset;
+?>             
+
+					</ul>
+				</li>-->                
+				
+				<li> 
+						<a id="media" href="javascript:void(0);" class="nav-top-item"> 
+						附件管理						</a>
+						<ul>
+													<li><a class="nav-bottom-item" id="media_add" href="media_add.php" target="main">上传新文件</a></li>
+														<li><a class="nav-bottom-item" id="media_main" href="media_main.php" target="main">附件数据管理</a></li>
+														<li><a class="nav-bottom-item" id="filemanager" href="media_main.php?dopost=filemanager" target="main">文件式管理器</a></li>
+
+													</ul>
+						</li>
+												<li> 
+						<a id="channel" href="javascript:void(0);" class="nav-top-item"> 
+						频道模型						</a>
+						<ul>
+													<li><a class="nav-bottom-item" id="mychannel_main" href="mychannel_main.php" target="main">内容模型管理</a></li>
+														<li><a class="nav-bottom-item" id="templets_one" href="templets_one.php" target="main">单页文档管理</a></li>
+														<li><a class="nav-bottom-item" id="stepselect_main" href="stepselect_main.php" target="main">联动类别管理</a></li>
+														<li><a class="nav-bottom-item" id="freelist_main" href="freelist_main.php" target="main">自由列表管理</a></li>
+                                                        <li><a class="nav-bottom-item" id="diy_main" href="diy_main.php" target="main">自定义表单</a></li>
+													</ul>
+						</li>
+												<li> 
+						<a id="module" href="javascript:void(0);" class="nav-top-item"> 
+						模块管理						</a>
+						<ul>
+													<li><a class="nav-bottom-item" id="module_main" href="module_main.php" target="main">模块管理</a></li>
+													<li><a class="nav-bottom-item" id="module_upload" href="module_upload.php" target="main">上传新模块</a></li>
+                                                    <li><a class="nav-bottom-item" id="module_make" href="module_make.php" target="main">模块生成向导</a></li>
+													</ul>
+						</li>
+												
+										
+				
+				
+				<li>
+					<a id="member" href="javascript:void(0);" class="nav-top-item">
+						会员管理
+					</a>
+					<ul>
+						<li><a class="nav-bottom-item" id="member_main" href="member_main.php" target="main">注册会员列表</a></li>
+						<li><a class="nav-bottom-item" id="member_rank" href="member_rank.php" target="main">会员级别设置</a></li>
+						<li><a class="nav-bottom-item" id="member_scores" href="member_scores.php" target="main">积分头衔设置</a></li>
+						<li><a class="nav-bottom-item" id="member_model_main" href="member_model_main.php" target="main">会员模型管理</a></li>
+						<li><a class="nav-bottom-item" id="member_pm" href="member_pm.php" target="main">会员短信管理</a></li>
+						<li><a class="nav-bottom-item" id="member_guestbook" href="member_guestbook.php" target="main">会员留言管理</a></li>
+                        <li><a class="nav-bottom-item" id="member_feed" href="member_info_main.php?type=feed" target="main">会员动态管理</a></li>
+                        <li><a class="nav-bottom-item" id="member_mood" href="member_info_main.php?type=mood" target="main">会员心情管理</a></li>
+					</ul>
+				</li>
+                
+				<li>
+					<a id="templets" href="javascript:void(0);" class="nav-top-item">
+						模版管理
+					</a>
+					<ul>
+						<li><a class="nav-bottom-item" id="templets_main" href="templets_main.php" target="main">默认模板管理</a></li>
+						<li><a class="nav-bottom-item" id="templets_tagsource" href="templets_tagsource.php" target="main">标签源码管理</a></li>
+						<li><a class="nav-bottom-item" id="mytag_main" href="mytag_main.php" target="main">自定义宏标记</a></li>
+						<li><a class="nav-bottom-item" id="mytag_tag_guide" href="mytag_tag_guide.php" target="main">智能标记向导</a></li>
+						<li><a class="nav-bottom-item" id="tag_test" href="tag_test.php" target="main">全局标记测试</a></li>
+					</ul>
+				</li>                
+				
+				    
+
+          
+				<li>
+					<a href="javascript:void(0);" class="nav-top-item"> 
+						安全使用
+					</a>
+					<ul>
+						
+                        <li><a class="nav-bottom-item" href="http://www.adminbuy.cn/dedecmsjc/1368.html" target="_blank" >安全设置</a></li>
+					</ul>                        					
+				</li>
+                
+				
+								<li>
+					<a href="javascript:void(0);" class="nav-top-item"> 
+						版权信息
+					</a>
+					<ul>
+						
+                        <li><a class="nav-bottom-item" href="http://www.adminbuy.cn" target="_blank" >主题：AB模板网</a></li>
+                        <li><a class="nav-bottom-item" href="http://sc.adminbuy.cn" target="_blank" >图标素材</a></li>
+                        <li><a class="nav-bottom-item" href="http://www.adminbuy.cn" target="_blank" >仿站建站QQ：9490489</a></li>
+					</ul>                        					
+				</li>			
+			</ul> <!-- End #main-nav -->
+
+                    <script>
+                $(".nav-bottom-item").click(function(){
+                    $(".nav-bottom-item").removeClass('current');
+                    $(".nav-top-item").removeClass('current');
+                    $(this).addClass("current");
+                    $(this).parents("li").children(".nav-top-item").addClass("current");
+                });   
+			 
+                </script>	
+
+				
+			</div> <!-- End #messages -->
+
+			<!-- End #messages -->
+			
+		</div></div>
+
+	</div>
+</body>
+</html>

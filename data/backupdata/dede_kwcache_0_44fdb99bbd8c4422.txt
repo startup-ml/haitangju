@@ -1,0 +1,1 @@
+INSERT INTO `dede_kwcache` VALUES('191','7','http://yuqing.jschina.com.cn/system/2016/03/20/028153990.shtml');

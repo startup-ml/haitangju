@@ -1,0 +1,1 @@
+<a href="[field:typelink/]">{dede:global.cfg_mc/}</a>

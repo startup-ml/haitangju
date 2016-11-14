@@ -1,0 +1,1 @@
+<span class="cur"> [field:typename /]</span>

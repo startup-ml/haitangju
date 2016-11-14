@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<link rel="stylesheet" type="text/css" href="/m/style/css/ltkj.css"/>
+</head>
+<body>
+<div id="pgcontainer"> 
+  
+  <!--头部的开始--> 
+  {dede:include filename="header_m.htm"/} 
+  <!--头部的结束--> 
+  
+  <!--主题内容的开始-->
+  <div class="zymain">
+    <div class="zybtmenu"> {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} <a href="list.php?tid=[field:id/]">[field:typename/]</a> {/dede:channel} </div>
+    <!--更换内容开始-->
+    <div class="xwzx_nr">
+      <ul>
+        {dede:list pagesize='30' titlelen='40'}
+        <li><a href="view.php?aid=[field:id/]">
+          <div class="lzj"><img src="[field:litpic/]"  /></div>
+          <h3>[field:title/]</h3>
+          <p>[field:description function='cn_substr(@me,60)'/]...</p>
+          </a> </li>
+        {/dede:list}
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <!--更换内容结束-->
+    <div class="pages"> {dede:pagelist listitem="index,end,pageno" listsize="5"/} </div>
+  </div>
+  <!--主题内容的结束--> 
+  
+  <!--底部的开始--> 
+  {dede:include filename="footer_m.htm"/} 
+  <!--底部的结束-->
+  <div class="dbgao"></div>
+</div>
+</body>
+<!--顶部右侧点击向左移动js-->
+<script type="text/javascript" src="/m/style/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/m/style/js/menu.js"></script>
+</html>

@@ -1,0 +1,1 @@
+<a class="yan2" href="[field:typelink /]">联系我们</a>

@@ -1,0 +1,12 @@
+<header> <a class="fanhui" href="javascript:window.history.back();"></a> <strong>{dede:field.typename/}</strong> <a href="#" class="menubtn"></a> 
+  <!-- use captain icon for toggle menu -->
+  <div id="hamburgermenu">
+    <ul>
+      <li><a href="index.php">网站首页</a></li>
+      {dede:channel type='top' row='10'}
+      <li><a href='list.php?tid=[field:id/]'>[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+  <div class="overlay"></div>
+</header>

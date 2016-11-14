@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="hd_top tr">
+    <div class="container"> <em class="fl">{dede:global.cfg_gg/}</em> <span class="fr"> {dede:type typeid='24'} <a href="[field:typelink/]">关于我们</a>{/dede:type}  | {dede:type typeid='44'} <a href="[field:typelink/]">联系我们</a>{/dede:type} | <a href="/#liuyan">在线留言</a> </span> </div>
+  </div>
+  <div class="hd_cont container">
+    <dl class="hd_logo">
+      <dt class="fl"><a href="/"> <img src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}" /></a></dt>
+      <dd class="fl">
+        <h2> 专注节能15年 打造中国最节能的空压机</h2>
+      </dd>
+    </dl>
+    <dl class="dh_phone fr">
+      <dt>全国统一服务热线</dt>
+      <dd> {dede:global.cfg_tel/}</dd>
+    </dl>
+  </div>
+  <div class="dh_nav">
+    <ul class="container">
+      <li class='home'><a class="navHome" href="/">网站首页</a></li>
+      {dede:channel type='top' currentstyle="
+      <li><a href='~typelink~' class='cur'>~typename~</a></li>
+      "}
+      <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+</div>

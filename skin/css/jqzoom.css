@@ -1,0 +1,155 @@
+﻿/* AB模版网 做最好的织梦整站模板下载网站 */
+/* 网址：Www.AdminBuy.Cn */
+/* 图标大全：Sc.AdminBuy.Cn 专业建站素材网站 */
+/* QQ：9490489 */
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none outside none;
+}
+/*图片放大镜样式*/
+.jqzoom {
+	float: left;
+	border: none;
+	position: relative;
+	padding: 0px;
+	cursor: pointer;
+	margin: 0px;
+	display: block;
+}
+.zoomdiv {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 350px;
+	height: 350px;
+	background: #ffffff;
+	border: 1px solid #CCCCCC;
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}
+.jqZoomPup {
+	z-index: 10;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #aaa;
+	background: #ffffff /*url(../images/zoom.png) 50% center no-repeat*/;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	filter: alpha(Opacity=50);
+}
+/*图片小图预览列表*/
+.spec-preview {
+	width: 350px;
+	border: 1px solid #DFDFDF;
+	overflow: hidden
+}
+.spec-scroll {
+	clear: both;
+	margin-top: 5px;
+	width: 352px;
+}
+.spec-scroll .prev {
+	float: left;
+	margin-right: 4px;
+}
+.spec-scroll .next {
+	float: right;
+}
+.spec-scroll .prev, .spec-scroll .next {
+	display: block;
+	font-family: "宋体";
+	text-align: center;
+	width: 10px;
+	height: 54px;
+	line-height: 54px;
+	color: red;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+}
+.spec-scroll .noscroll {
+	color: Gray;
+	cursor: default;
+}
+.spec-scroll .items {
+	float: left;
+	position: relative;
+	width: 322px;
+	height: 56px;
+	overflow: hidden;
+}
+.spec-scroll .items ul {
+	position: absolute;
+	width: 999999px;
+	height: 56px;
+}
+.spec-scroll .items ul li {
+	float: left;
+	width: 64px;
+	text-align: center;
+}
+.spec-scroll .items ul li img {
+	border: 1px solid #CCC;
+	padding: 2px;
+	width: 50px;
+	height: 50px;
+}
+.spec-scroll .items ul li img:hover {
+	border: 2px solid #FF6600;
+	padding: 1px;
+}
+.bimg {
+	float: left;
+	width: 352px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.prodbaseinfo_a {
+	float: left;
+	width: 342px;
+	margin-left: 16px;
+	z-index: 1;
+}
+.h2_prodtitle {
+	font-size: 16px;
+	color: #414141;
+	border-bottom: 1px dashed #bbbbbb;
+	padding: 2px 0 10px;
+	line-height: 1.6em;
+}
+.ul_prodinfo {
+	padding: 6px 0;
+	overflow: hidden;
+	zoom: 1;
+}
+.ul_prodinfos {
+	padding: 6px 15px;
+	overflow: hidden;
+	zoom: 1;
+	background: #f3f3f3;
+	font-size: 14px;
+	font-weight: bold;
+}
+.ul_prodinfos li {
+	padding: 5px 0 10px;
+}
+.ul_prodinfo li {
+	padding: 6px 0;
+}
+.ul_prodinfo li span {
+	font-size: 14px
+}
+.li_normalprice, .li_prono {
+	line-height: 24px;
+}

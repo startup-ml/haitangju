@@ -1,0 +1,2 @@
+INSERT INTO `dede_addonsanwang` VALUES('140','9','','','','127.0.0.1','http://0070.wangzhan31.com/','http://2070.wangzhan31.com/');
+INSERT INTO `dede_addonsanwang` VALUES('141','9','','','','127.0.0.1','http://0067.wangzhan31.com/','http://2067.wangzhan31.com/');

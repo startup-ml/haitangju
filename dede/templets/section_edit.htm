@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>区块广告</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+ <script src="js/main.js" language="javascript"></script>
+<script language="JavaScript">
+function ChangeListStyle(){
+   var itxt = document.getElementById("myinnertext");
+   var myems = document.getElementsByName("liststyle");
+   if(myems[0].checked) itxt.value = document.getElementById("list1").innerHTML;
+   else if(myems[1].checked) itxt.value = document.getElementById("list2").innerHTML;
+   else if(myems[2].checked) itxt.value = document.getElementById("list3").innerHTML;
+   else if(myems[3].checked) itxt.value = document.getElementById("list4").innerHTML;
+   itxt.value = itxt.value.replace("<BR>","<BR/>");
+   itxt.value = itxt.value.toLowerCase();
+}
+function ShowHide(objname){
+  var obj = document.getElementById(objname);
+  if(obj.style.display == "block" || obj.style.display == "")
+	   obj.style.display = "none";
+  else
+	   obj.style.display = "block";
+}
+function SelectTemplets(fname)
+{
+   if(document.all){
+     var posLeft = window.event.clientY-200;
+     var posTop = window.event.clientX-300;
+   }
+   else{
+     var posLeft = 100;
+     var posTop = 100;
+   }
+   window.open("/include/dialog/select_templets.php?&activepath=<?php echo urlencode($cfg_templets_dir)?>&f="+fname, "poptempWin", "scrollbars=yes,resizable=yes,statebar=no,width=600,height=400,left="+posLeft+", top="+posTop);
+}
+function CheckSubmit(){
+   if(document.form1.sectionname.value==""){
+       alert("区块标题不能为空！");
+	   document.form1.sectionname.focus();
+	   return false;
+   }
+   return true;
+} 
+
+</script>
+</head>
+<body background="images/allbg.gif" leftmargin='8' topmargin='8'>
+    <form action="section_edit.php" method="post"  name="form1" onSubmit="return CheckSubmit();">
+      <input type="hidden" name="dopost" value="saveedit">
+	    <input type='hidden' name='aid' value='<?php echo $aid?>'>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D6D6D6">
+  <tr>
+    <td height="28" background="images/tbg.gif" style="padding-left:10px;"><b><a href="section.php"><u>区块管理</u></a></b> &gt;&gt; 增加区块 </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" valign="top">
+	<table width="98%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="background:#CFCFCF;">
+
+      <tr>
+        <td height="265" valign="top" bgcolor="#FFFFFF"><table width="99%" border="0" align="center" cellpadding="0" cellspacing="1">
+            <tr>
+              <td height="56"> <table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="28" colspan="2" align="left"><img src="images/help.gif" width="16" height="16">区块的说明：区块(section)，能生成固定静态页、以便网页SSI Include</td>
+                  </tr>
+                  <tr>
+                    <td width="16%" height="28" align="left">区块标题：</td>
+                    <td width="84%" align="left"><input name="sectionname" type="text" id="sectionname" style="width:35%" value="<?php echo $row['sectionname']?>" ></td>
+                  </tr>
+				   <tr>
+                    <td width="16%" height="28" align="left">区块分类：</td>
+                    <td width="84%" align="left">
+					<select name='typeid' style='width:150' id="typeid">
+					<?php echo $option;?>
+					</select>
+					</td>
+                  </tr>
+                  <tr>
+                    <td height="28" align="left">区块HTML存放目录：</td>
+                    <td align="left"><input name="filedir" type="text" id="filedir" style="width:35%" value="<?php echo $row['filedir']?>">
+                        根目录下的section 不带 '/'</td>
+                  </tr>
+                  <tr>
+                    <td height="28" align="left">区块默认页名称：</td>
+                    <td align="left"> <input name="defaultpage" type="text" id="defaultpage" style="width:35%" value="<?php echo $row['defaultpage']?>">
+                    </td>
+                  </tr>                   
+                    <tr>
+                    <td height="30" align="left">模板类型：</td>
+                    <td align="left">
+    <input name="templetType" type="radio" id="bindtype0" value="0" <?php if($row["templetType"]=="0") echo "checked=\"checked\"";?> class="bindtype"  onclick="Show(0)"/>
+        代码 
+          <input name="templetType" type="radio" value="1" <?php if($row["templetType"]=="1") echo "checked=\"checked\"";?> class="bindtype" onclick="Show(1)"/>
+模板类型
+                    </td>
+                  </tr>
+                  <tr id="idtemplet">
+                    <td height="30" align="left">区块模板：</td>
+                    <td align="left"><input name="templet" type="text" id="templet" style="width:300px" value="<?php echo $row['templet']?>">
+                      <input type="button" name="set4" value="浏览..." style="width:60px" onClick="SelectTemplets('form1.templet');" class="inputbut"/></td>
+                  </tr>
+              <tr id="idphpcode">
+                    <td height="30" align="left">代码：</td>
+                    <td align="left"><textarea name="phpcode" id="phpcode" style="width:70%;height:100px"><?php echo $row['phpcode']?></textarea></td>
+                  </tr>
+                  <tr>
+                    <td height="28" align="left">排 序：</td>
+                    <td align="left"> <input name="sortrank" type="text" id="sortrank" style="width:10%" value="<?php echo $row['sortrank']?>">
+                    </td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td height="50" align="left"> &nbsp; <input name="Submit2" type="submit" id="Submit2" value="保存区块" class="coolbg" />
+              </td>
+            </tr>
+          </table></td>
+      </tr>
+    </form>
+
+
+<script>
+   $Obj("<?php  if($row["templetType"]=="0")   echo  "idtemplet"; else echo "idphpcode";?>").style.display = "none";
+function  Show(t)
+{    
+   if(t=="1")
+   {
+      $Obj("idtemplet").style.display = "";
+       $Obj("idphpcode").style.display = "none";
+	   if($Obj("templet").value=="")
+          $Obj("templet").value="{style}/section/section_default.htm";
+   }
+   else {
+       $Obj("idtemplet").style.display = "none";
+       $Obj("idphpcode").style.display = "";    
+   }    
+}
+</script>
+</body>
+</html>

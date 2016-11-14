@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>区块管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+
+</head>
+<body background="images/allbg.gif" leftmargin="8" topmargin='8'>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D6D6D6">
+  <tr>
+    <td height="28" background="images/tbg.gif" colspan="7" style="padding-left:10px;">
+      <b><a href="section.php">区块管理</a></b>&nbsp;[<a href="section_add.php"><u>增加一个区块</u></a>]
+    [<a href="sectiontype_main.php"><u>区块分类管理</u></a>]</td>
+</tr>
+  <tr>
+    <td height="28" colspan="6" style="padding-left:10px;" bgcolor="#FFFFFF"><table>
+      <tr>
+        <form action='section.php' method='get' name='form3' id="form3">
+          <input type='hidden' name='dopost' value='listArchives' />
+          <td><table width='600' border='0' cellpadding='0' cellspacing='0'>
+            <tr>
+              <td width='90' align='center'>请选择分类：</td>
+              <td width='124'><select name='typeid' style='width:150' id="typeid">         
+                <?php echo $option;?>
+              </select></td>
+              <td width='71'> 关键字： </td>
+              <td width='185'><input type='text' name='keyword' style='width:150' /></td>
+              <td width="130"><input name="imageField" type="image" src="images/button_search.gif" width="60" height="22" border="0" class="np" /></td>
+            </tr>
+          </table></td>
+        </form>
+      </tr>
+    </table>
+	
+	</td>
+  </tr>
+  </table>
+
+
+  <form name="section"  action="makehtml_section.php" method="POST">
+  <script language='javascript'>
+function selAll()
+{
+	var ids=document.getElementsByName("sid[]");    
+	var count=document.getElementsByName("sid[]").length; 
+	for(i=0;i<count;i++)
+	{
+		ids[i].checked=true;
+	}
+}
+function selNone()
+{
+  var ids=document.getElementsByName("sid[]");    
+	var count=document.getElementsByName("sid[]").length; 
+
+	for(i=0;i<count;i++)
+	{
+		ids[i].checked=false;
+	}
+}
+function selNor()
+{
+var ids=document.getElementsByName("sid[]");    
+	var count=document.getElementsByName("sid[]").length; 
+	for(i=0;i<count;i++)
+	{
+		if(ids[i].checked==false)
+			ids[i].checked=true;
+		else
+			ids[i].checked=false;
+		
+	}
+}
+
+//更新HTML
+function MakeHTML(id){
+	location.href = 'makehtml_section.php?sid='+id;
+}
+
+function MakeAllHTML(id){
+	location.href = 'makeallhtml_section.php?id='+id;
+}
+
+ 
+function CopyText(section,name)
+{
+ 
+   document.getElementById("code").style.display="";
+ 
+   if(section.indexOf("{id}") > 0 )  
+ 	  name=name+"-自行修改id";
+   document.getElementById("codetext").value='<!--#include virtual="/'+section+'"--><!--'+name+'-->';
+}
+
+ 
+</script> 
+ 
+  <input type="hidden" value="makesections" name="dopost">
+ <div id="flashcopier"></div>
+  <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D6D6D6">
+  <tr align="center"  bgcolor="#FBFCE2"" height="24"> 
+      <td width="8%">编号</td>
+      <td width="5%">类型</td>
+      <td width="15%">区块名称</td>
+      <td width="15%">存放目录</td>
+      <td width="11%">生成页面名称</td>
+      <td width="23%">区块模板</td>   
+      <td width="23%">管理</td>
+   </tr>   
+
+    {dede:datalist}
+    <tr align="center" bgcolor="#FFFFFF" height="24" onMouseMove="javascript:this.bgColor='#FCFDEE';" onMouseOut="javascript:this.bgColor='#FFFFFF';"> 
+        <td><input name="sid[]" type="checkbox" class="np" value="{dede:field.id/}"> </td>
+        <td><?php if($fields['templetType'] == 0){echo "<font color=red>代码</font>";}else{echo "<font color=green>模板</font>";} ?></td>
+        <td>{dede:field.sectionname /}</td>
+        <td>{dede:field.filedir /}</td>
+        <td><a href="../section/{dede:field.defaultpage /}" target="blank"><font color="red">{dede:field.defaultpage /}</font></a></td>
+        <td>{dede:field.templet /}</td>        
+        <td>
+			<a onclick="MakeHTML({dede:field.id/})" href="#">[更新]</a>
+            <a href="#" onclick="MakeAllHTML({dede:field.id/})" title="批量更新">[<font color="green">批</font>]</a>
+			<a href='section_edit.php?aid={dede:field.id /}&dopost=edit'>[更改]</a>
+			<a href='#' onClick="CopyText('section/{dede:field.defaultpage /}','{dede:field.sectionname /}')">[复制区块]</a>
+			<a href='section.php?sid={dede:field.id /}&dopost=delete' onclick="return confirm('删除不能恢复\n确定生成吗?')">[删除]</a>
+
+			
+		</td>
+     </tr>
+	{/dede:datalist}
+     <tr bgcolor="#F9FCEF" height="26"> 
+	 <td colspan="7" align="left">
+		<input type='button' name='kk1' value='全选' onClick="selAll()" class="coolbg np" /> 
+		<input type='button' name='kk2' value='取消' onClick="selNone()" class="coolbg np" />
+		<input type='button' name='kk3' value='反选' onClick="selNor()" class="coolbg np" />
+		<input type='submit' name='submit' value='生成区块' class="np" />	 
+      	{dede:pagelist listsize=15/}
+      </td>
+     </tr>
+   </table>
+  
+
+  <div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Verdana; font-size: 9pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");display:none; ' id="code">
+   
+  <font color="red"> 复制代码</font>： <input type="text" style="width:600px;" id="codetext" style="color:red;"/>
+  </div>
+   </form>
+</body>
+</html>

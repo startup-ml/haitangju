@@ -1,0 +1,1 @@
+<div class="bgitem" id="flashbg[field:global name=autoindex runphp="yes"]@me=@me-1;[/field:global]" style="background: url('[field:litpic/]') no-repeat scroll center top; height: 420px; width: 100%; cursor: pointer; margin: 0 auto;"></div>

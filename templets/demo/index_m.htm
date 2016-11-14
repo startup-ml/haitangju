@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>{dede:global.cfg_webname/}移动版</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by adminbuy.cn" />
+<link rel="stylesheet" type="text/css" href="/m/style/css/ltkj.css"/>
+</head>
+<body>
+<!--首页头部的开始-->
+<div class="ltop">
+  <div class="ltopl fl"><img src="/m/style/images/logo.png"  /></div>
+  <div class="ltopr fr">
+    <p>全国400免费电话：<br />
+      <strong>{dede:global.cfg_tel/}</strong></p>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--首页头部的结束--> 
+
+<!--nav的开始-->
+
+<div class="lnav">
+  <ul>
+    <li><a href="index.php">网站首页</a></li>
+    {dede:channel type='top'}
+    <li><a href='list.php?tid=[field:id/]'>[field:typename/]</a></li>
+    {/dede:channel}
+  </ul>
+</div>
+
+<!--nav的结束--> 
+
+<!--ban图片的开始-->
+
+<div id="slides" class="slider-focus">
+  <div class="bd">
+    <div class="tempWrap" style="overflow:hidden; position:relative;">
+      <ul>
+        {dede:arclist row='5' titlelen='36' typeid='46'}
+        <li><a class="pic"><img src="[field:litpic/]"> </a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+  <div class="hd">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<!--ban图片的结束-->
+
+<div class="lgywm"> 
+  
+  <!--标题开始-->
+  
+  <div class="lgywm_title">
+    <div class="xian"></div>
+    <div class="lwenzi">
+      <p><strong>关于我们</strong><br />
+        ABOUT US</p>
+    </div>
+  </div>
+  
+  <!--标题结束-->
+  
+  <div class="lgywm_wz">
+    <p>{dede:sql sql="select content from dede_arctype where id=24"}[field:content function=cn_substr(Html2Text(@me),500)/]{/dede:sql}...</p>
+  </div>
+  
+  <!--按钮更多开始-->
+  
+  <div class="angd">{dede:type typeid='24'}<a href="list.php?tid=[field:id/]">了解更多 &gt;&gt; </a>{/dede:type}</div>
+  
+  <!--按钮更多结束--> 
+  
+</div>
+
+<!--关于我们结束--> 
+
+<!--成功案例开始-->
+
+<div class="fwxm"> 
+  
+  <!--标题开始-->
+  
+  <div class="lgywm_title">
+    <div class="xian"></div>
+    <div class="lwenzi">
+      <p><strong>产品中心</strong><br />
+        PRODUCT</p>
+    </div>
+  </div>
+  
+  <!--标题结束-->
+  
+  <div class="cgal_nr">
+    <ul>
+      {dede:arclist row='6' titlelen='16' typeid='1'}
+      <li> <a href="view.php?aid=[field:id/]">
+        <div class="lzj"><img src="[field:litpic/]"  height="180px" width="220px"/></div>
+        [field:title/]</a> </li>
+      {/dede:arclist}
+      <div class="clear"></div>
+    </ul>
+  </div>
+  
+  <!--按钮更多开始-->
+  
+  <div class="angd">{dede:type typeid='1'}<a href="list.php?tid=[field:id/]">了解更多 &gt;&gt; </a>{/dede:type}</div>
+  
+  <!--按钮更多结束--> 
+  
+</div>
+
+<!--成功案例结束--> 
+
+<!--成功案例开始-->
+
+<div class="fwxm"> 
+  
+  <!--标题开始-->
+  
+  <div class="lgywm_title">
+    <div class="xian"></div>
+    <div class="lwenzi">
+      <p><strong>成功案例</strong><br />
+        CASE</p>
+    </div>
+  </div>
+  
+  <!--标题结束-->
+  
+  <div class="cgal_nr">
+    <ul>
+      {dede:arclist row='6' titlelen='16' typeid='13'}
+      <li> <a href="view.php?aid=[field:id/]">
+        <div class="lzj"><img src="[field:litpic/]"  height="180px" width="220px"/></div>
+        [field:title/]</a> </li>
+      {/dede:arclist}
+      <div class="clear"></div>
+    </ul>
+  </div>
+  
+  <!--按钮更多开始-->
+  
+  <div class="angd">{dede:type typeid='13'}<a href="list.php?tid=[field:id/]">了解更多 &gt;&gt; </a>{/dede:type}</div>
+  
+  <!--按钮更多结束--> 
+  
+</div>
+
+<!--成功案例结束--> 
+
+<!--新闻中心开始-->
+
+<div class="fwxm"> 
+  
+  <!--标题开始-->
+  
+  <div class="lgywm_title">
+    <div class="xian"></div>
+    <div class="lwenzi">
+      <p><strong>新闻资讯</strong><br />
+        NEWS</p>
+    </div>
+  </div>
+  
+  <!--标题结束-->
+  
+  <div class="xwzx_nr">
+    <ul>
+      {dede:arclist row='4' titlelen='36' typeid='34'}
+      <li> <a href="view.php?aid=[field:id/]">
+        <div class="lzj"><img src="[field:litpic/]"  /></div>
+        <h3>[field:title/]</h3>
+        <p>[field:description function='cn_substr(@me,60)'/]...</p>
+        </a> </li>
+      {/dede:arclist}
+      <div class="clear"></div>
+    </ul>
+  </div>
+  
+  <!--按钮更多开始-->
+  
+  <div class="angd">{dede:type typeid='34'}<a href="list.php?tid=[field:id/]">了解更多 &gt;&gt; </a>{/dede:type}</div>
+  
+  <!--按钮更多结束--> 
+  
+</div>
+
+<!--新闻中心结束--> 
+
+<!--底部的开始--> 
+{dede:include filename="footer_m.htm"/}
+<div class="dbgao"></div>
+</body>
+<!--焦点图js-->
+<script src="/m/style/js/jquery-1.9.1.min.js"></script>
+<script src="/m/style/js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+TouchSlide({ 
+	slideCell:"#slides",
+	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	mainCell:".bd ul", 
+	effect:"leftLoop", 
+	autoPage:true,//自动分页
+	autoPlay:false //自动播放
+});
+</script>
+</html>

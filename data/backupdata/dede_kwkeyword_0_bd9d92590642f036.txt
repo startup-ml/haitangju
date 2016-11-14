@@ -1,0 +1,6 @@
+INSERT INTO `dede_kwkeyword` VALUES('1','2','拓展项目','0','0','4','1458447718');
+INSERT INTO `dede_kwkeyword` VALUES('2','3','拓展基地','0','0','4','1458447790');
+INSERT INTO `dede_kwkeyword` VALUES('3','4','活动推荐','0','0','4','1458448301');
+INSERT INTO `dede_kwkeyword` VALUES('4','5','户外知识','0','0','4','1458448324');
+INSERT INTO `dede_kwkeyword` VALUES('7','7','案例','0','0','2','1458448497');
+INSERT INTO `dede_kwkeyword` VALUES('6','6','新闻动态','0','0','2','1458447763');

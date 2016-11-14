@@ -1,0 +1,2 @@
+INSERT INTO `dede_diyform2` VALUES('1','0','请填写联系人','请填写正确手机号码','请填写正确电子邮箱','请填写订购的产品数量和产品描述，方便我们进行统一备货');
+INSERT INTO `dede_diyform2` VALUES('2','0','AB模版网','13588319329','9490489@qq.com','AB模版网留言测试 www.adminbuy.cn');
