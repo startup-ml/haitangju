@@ -1,12 +1,4 @@
 <?php
-/**
- * @version        $Id: common.inc.php 3 17:44 2010-11-23 tianya $
- * @package        DedeCMS.Libraries
- * @copyright      Copyright (c) 2007 - 2010, DesDev, Inc.
- * @license        http://help.dedecms.com/usersguide/license.html
- * @link           http://www.dedecms.com
- */
-
 // 报错级别设定,一般在开发环境中用E_ALL,这样能够看到所有错误提示
 // 系统正常运行后,直接设定为E_ALL || ~E_NOTICE,取消错误显示
 //error_reporting(E_ALL);
@@ -229,9 +221,9 @@ $cfg_version = 'V57_UTF8_SP1';
 $cfg_soft_lang = 'utf-8';
 $cfg_soft_public = 'base';
 
-$cfg_softname = '织梦内容管理系统';
-$cfg_soft_enname = 'DedeCMS';
-$cfg_soft_devteam = 'DedeCMS官方团队';
+$cfg_softname = '网舰队内容管理系统';
+$cfg_soft_enname = '网舰队CMS';
+$cfg_soft_devteam = '网舰队CMS官方团队';
 
 //文档的默认命名规则
 $art_shortname = $cfg_df_ext = '.html';

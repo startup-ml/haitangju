@@ -183,6 +183,8 @@ display:block;
 }
 /*--顶部链接导航*/
 .hd_top {
+	color: #b0b0b0;
+    background: #333;
 }
 .hd_top .container {
 	height: 37px;
@@ -203,11 +205,11 @@ display:block;
 .hd_cont .hd_logo {
 	position: absolute;
 	left: 0;
-	top: 20px;
+	top: 10px;
 }
 .hd_cont .hd_logo dd {
 	margin-left: 35px;
-	padding-top: 21px;
+	padding-top: 25px;
 }
 .hd_cont .hd_logo dd h2 {
 	font-size: 20px;
@@ -251,7 +253,8 @@ display:block;
 	padding-left: 4px;
 	white-space: nowrap;
 	word-break: break-all;
-	background: url(../images/dh.jpg) no-repeat left;
+	/*background: url(../images/dh.jpg) no-repeat left;*/
+	background-color: #008CE1;
 }
 .dh_nav>ul>li.home {
 	background: none
@@ -271,7 +274,12 @@ display:block;
 	background-image: none;
 }
 .dh_nav>ul>li>a.cur, .dh_nav>ul>li:hover>a {
-	background: url(../images/navlih.png) repeat-x center bottom;
+	/*background: url(../images/navlih.png) repeat-x center bottom;*/
+	/*background:  linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ), url(../images/dh.jpg) no-repeat left;*/
+	background-color: #0365A0;
 }
 /*.dh_nav>ul>li ul{position:absolute; top:58px; left:0px; padding-bottom:10px; display:none; width:100%; background-color:#046640;}
 .dh_nav>ul>li ul li{margin:0px 10px; height:35px; line-height:35px; overflow:hidden; text-align:center; border-top:1px dashed #8bb1a2;}
