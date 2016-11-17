@@ -1,1 +1,0 @@
-<a href="[field:typelink/]">关于我们</a>

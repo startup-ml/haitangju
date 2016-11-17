@@ -1,0 +1,1 @@
+UPDATE `haitangju`.`dede_sysconfig` SET `value`='东莞市海堂居机电设备有限公司' WHERE `varname`='cfg_webname';
