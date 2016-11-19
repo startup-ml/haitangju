@@ -77,19 +77,19 @@ function lib_channel(&$ctag,&$refObj)
 
     if($type=='top')
     {
-        $sql = "SELECT id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
+        $sql = "SELECT typelitpic,id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
           From `#@__arctype` WHERE reid=0 And ishidden<>1 order by sortrank asc limit 0, $line ";
     }
     else if($type=='son')
     {
         if($typeid==0) return '';
-        $sql = "SELECT id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
+        $sql = "SELECT typelitpic,id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
           From `#@__arctype` WHERE reid='$typeid' And ishidden<>1 order by sortrank asc limit 0, $line ";
     }
     else if($type=='self')
     {
         if($reid==0) return '';
-        $sql = "SELECT id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
+        $sql = "SELECT typelitpic,id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
             FROM `#@__arctype` WHERE reid='$reid' And ishidden<>1 order by sortrank asc limit 0, $line ";
     }
     //And id<>'$typeid'
@@ -108,7 +108,7 @@ function lib_channel(&$ctag,&$refObj)
     //如果用子栏目模式，当没有子栏目时显示同级栏目
     if($type=='son' && $reid!=0 && $totalRow==0)
     {
-        $sql = "SELECT id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
+        $sql = "SELECT typelitpic,id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
             FROM `#@__arctype` WHERE reid='$reid' And ishidden<>1 order by sortrank asc limit 0, $line ";
         $dsql->SetQuery($sql);
       $dsql->Execute();
