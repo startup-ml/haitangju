@@ -178,7 +178,7 @@ display:block;
 .header {
 	width: 100%;
 	height: 217px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background: url(../images/headerbg.png) no-repeat center;
 }
 /*--顶部链接导航*/
@@ -254,7 +254,7 @@ display:block;
 	white-space: nowrap;
 	word-break: break-all;
 	/*background: url(../images/dh.jpg) no-repeat left;*/
-	background-color: #008CE1;
+	/*background-color: #008CE1;*/
 }
 .dh_nav>ul>li.home {
 	background: none
@@ -281,6 +281,7 @@ display:block;
     ), url(../images/dh.jpg) no-repeat left;*/
 	background-color: #0365A0;
 }
+
 /*.dh_nav>ul>li ul{position:absolute; top:58px; left:0px; padding-bottom:10px; display:none; width:100%; background-color:#046640;}
 .dh_nav>ul>li ul li{margin:0px 10px; height:35px; line-height:35px; overflow:hidden; text-align:center; border-top:1px dashed #8bb1a2;}
 .dh_nav>ul>li ul li.noBt{border-top:none;}

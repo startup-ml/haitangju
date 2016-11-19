@@ -22,11 +22,57 @@
   <div class="dh_nav">
     <ul class="container">
       <li class='home'><a class="navHome" href="/">网站首页</a></li>
+      <!--{dede:channelartlist typeid='24,1,13,28,34,38,44'}
+        <li onmouseenter="onNavMouseEnter(this)">
+          <a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a>
+          <div class="sub-dropdown">
+            {dede:channel type='son'}
+              <ul>
+                <li><a href='[field:typeurl/]'> [field:typename/]</a></li>
+              </ul>
+            {/dede:channel}
+          </div>
+        </li>
+      {/dede:channelartlist}-->
       {dede:channel type='top' currentstyle="
-      <li><a href='~typelink~' class='cur'>~typename~</a></li>
-      "}
-      <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+        <li onmouseenter='onNavMouseEnter(this, ~id~)' onmouseleave='onNavMouseLeave(this, ~id~)'><a href='~typelink~' class='cur'>~typename~</a></li>
+        "}
+        <li onmouseenter="onNavMouseEnter(this, [field:id/])" onmouseleave="onNavMouseLeave(this, [field:id/])"><a href="[field:typeurl/]">[field:typename/]</a></li>
       {/dede:channel}
+       <div class="sub-dropdown" onmouseenter="onDropdownMouseEnter(this)" onmouseleave="onDropdownMouseLeave(this)">
+          {dede:channel type='son' typeid='1'}
+            <ul>
+              <li><a href='[field:typeurl/]'> [field:typename/]</a></li>
+            </ul>
+          {/dede:channel}
+        </div>
     </ul>
   </div>
 </div>
+
+<script>
+  function onNavMouseEnter(ele, id) {
+      if (id == 1 && $(ele).parent().children(".sub-dropdown").children().length > 0) {
+          var offset = $(ele).offset();
+          $(ele).parent().children(".sub-dropdown").css({
+            'top': offset.top + 58 + 'px', 
+            'left': offset.left + 'px',
+            'display': "block"
+            });
+      }
+  }
+
+  function onNavMouseLeave(ele, id) {
+      if (id == 1 && $(ele).parent().children(".sub-dropdown").children().length > 0) {
+          $(ele).parent().children(".sub-dropdown").css("display", "none");
+      }
+  }
+
+  function onDropdownMouseEnter(ele) {
+      $(ele).css("display", "block");
+  }
+
+  function onDropdownMouseLeave(ele) {
+      $(ele).css("display", "none");
+  }
+</script>

@@ -390,6 +390,7 @@ p sup {
 .cpMu li:hover a, .cpMu li.cur a {
 	color: #fff;
 }
+
 .cpMuCont {
 	margin-top: 2px;
 	padding-bottom: 12px;
@@ -411,6 +412,34 @@ p sup {
 	font-size: 24px;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.sub-dropdown {
+  position: absolute;
+  z-index: 10000;
+  display: none;
+  width: 210px;
+  border: 1px solid #e2e2e2;
+  background-color: white;
+}
+
+.sub-dropdown li a {
+	padding: 0 10px;
+	margin: 0 6px;
+	display: block;
+	height: 37px;
+	line-height: 37px;
+	border-bottom: 1px dotted #b2bcc8;
+	font-size: 13px;
+	color: #333;
+	text-decoration: none;
+}
+.sub-dropdown li:hover, .cpMu li.cur {
+	background-color: #546a85;
+}
+.sub-dropdown li:hover a, .cpMu li.cur a {
+	color: #fff;
+}
+
 .abouts {
 	padding: 10px;
 	border: 1px solid #ccc;
