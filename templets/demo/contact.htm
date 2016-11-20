@@ -57,7 +57,11 @@
         var map = new BMap.Map("dituContent");//鍦ㄧ櫨搴﹀湴鍥惧鍣ㄤ腑鍒涘缓涓€涓湴鍥?
         var point = new BMap.Point(117.476774,38.897586);//瀹氫箟涓€涓腑蹇冪偣鍧愭爣
         map.centerAndZoom(point,9);//璁惧畾鍦板浘鐨勪腑蹇冪偣鍜屽潗鏍囧苟灏嗗湴鍥炬樉绀哄湪鍦板浘瀹瑰櫒涓?
-        window.map = map;//灏唌ap鍙橀噺瀛樺偍鍦ㄥ叏灞€
+        map.addControl(new BMap.ScaleControl()); 
+		map.addControl(new BMap.NavigationControl()); // 开启标注工具 
+		var marker = new BMap.Marker(point); // 创建标注 
+		map.addOverlay(marker); // 将标注添加到地图中
+		window.map = map;//灏唌ap鍙橀噺瀛樺偍鍦ㄥ叏灞€
     }
     
     //鍦板浘浜嬩欢璁剧疆鍑芥暟锛?

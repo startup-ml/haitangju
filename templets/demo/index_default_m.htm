@@ -6,6 +6,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
 <link rel="stylesheet" type="text/css" href="/m/style/css/ltkj.css"/>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<style type="text/css">
+#dituContent img {
+max-width: inherit;
+}
+</style>
 </head>
 <body>
 <div id="pgcontainer"> 
@@ -19,8 +25,9 @@
     <div class="zybtmenu"> {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} <a href="list.php?tid=[field:id/]">[field:typename/]</a> {/dede:channel} </div>
     <div class="zy_nr"> {dede:field.content/} </div>
   </div>
+  <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
   <!--主题内容的结束--> 
-  
+
   <!--底部的开始--> 
   {dede:include filename="footer_m.htm"/} 
   <!--底部的结束-->
@@ -30,4 +37,47 @@
 <!--顶部右侧点击向左移动js-->
 <script type="text/javascript" src="/m/style/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/m/style/js/menu.js"></script>
+<script type="text/javascript">
+	//鍒涘缓鍜屽垵濮嬪寲鍦板浘鍑芥暟锛?
+    function initMap(){
+        createMap();//鍒涘缓鍦板浘
+        setMapEvent();//璁剧疆鍦板浘浜嬩欢
+        addMapControl();//鍚戝湴鍥炬坊鍔犳帶浠?
+    }
+    
+    //鍒涘缓鍦板浘鍑芥暟锛?
+    function createMap(){
+        var map = new BMap.Map("dituContent");//鍦ㄧ櫨搴﹀湴鍥惧鍣ㄤ腑鍒涘缓涓€涓湴鍥?
+        var point = new BMap.Point(117.476774,38.897586);//瀹氫箟涓€涓腑蹇冪偣鍧愭爣
+        map.centerAndZoom(point,9);//璁惧畾鍦板浘鐨勪腑蹇冪偣鍜屽潗鏍囧苟灏嗗湴鍥炬樉绀哄湪鍦板浘瀹瑰櫒涓?
+        map.addControl(new BMap.ScaleControl()); 
+		map.addControl(new BMap.NavigationControl()); // 开启标注工具 
+		var marker = new BMap.Marker(point); // 创建标注 
+		map.addOverlay(marker); // 将标注添加到地图中
+		window.map = map;//灏唌ap鍙橀噺瀛樺偍鍦ㄥ叏灞€
+    }
+    
+    //鍦板浘浜嬩欢璁剧疆鍑芥暟锛?
+    function setMapEvent(){
+        map.enableDragging();//鍚敤鍦板浘鎷栨嫿浜嬩欢锛岄粯璁ゅ惎鐢?鍙笉鍐?
+        map.enableScrollWheelZoom();//鍚敤鍦板浘婊氳疆鏀惧ぇ缂╁皬
+        map.enableDoubleClickZoom();//鍚敤榧犳爣鍙屽嚮鏀惧ぇ锛岄粯璁ゅ惎鐢?鍙笉鍐?
+        map.enableKeyboard();//鍚敤閿洏涓婁笅宸﹀彸閿Щ鍔ㄥ湴鍥?
+    }
+    
+    //鍦板浘鎺т欢娣诲姞鍑芥暟锛?
+    function addMapControl(){
+        //鍚戝湴鍥句腑娣诲姞缂╂斁鎺т欢
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //鍚戝湴鍥句腑娣诲姞缂╃暐鍥炬帶浠?
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //鍚戝湴鍥句腑娣诲姞姣斾緥灏烘帶浠?
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+
+    initMap();//鍒涘缓鍜屽垵濮嬪寲鍦板浘
+</script>
 </html>

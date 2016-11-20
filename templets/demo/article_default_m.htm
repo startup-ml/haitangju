@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<link href="/skin/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/skin/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/skin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/skin/css/temp.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="/m/style/css/ltkj.css"/>
+<script type="text/javascript" src="/skin/js/msclass.js"></script>
 </head>
 <body>
 <div id="pgcontainer"> 
@@ -22,7 +27,39 @@
       {dede:field.body/} </div>
   </div>
   <!--主题内容的结束--> 
-  
+  <!-- 在线留言 -->
+   
+      <div class="dgxxBox" id="caigou">
+        <p> 订购：{dede:field.title/}</p>
+        
+        <ul class="m_form clearfix" id="tbForm1">
+          <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="2" />
+            <input type="hidden" name="do" value="2" />
+            <li class="areLi">
+              <textarea class="txtAre" type='text' name='content' id='content' placeholder="请填写订购的产品数量和产品描述，方便我们进行统一备货"></textarea>
+            </li>
+            <li class="clearfix">
+              <label> 联 系 人</label>
+              <input class="iptTxt" type='text' name='name' id='name' placeholder="请填写联系人"/>
+            </li>
+            <li class="clearfix">
+              <label> 手机号码</label>
+              <input class="iptTxt" type='text' name='tel' id='tel' placeholder="请填写正确手机号码"/>
+            </li>
+            <li class="clearfix">
+              <label> 电子邮件</label>
+              <input class="iptTxt" type='text' name='email' id='email' placeholder="请填写正确电子邮箱" />
+            </li>
+            <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,text" />
+            <input type="hidden" name="dede_fieldshash" value="877b0484352c0bb6689972090e73d6d9" />
+            <li class="btnLi">
+              <input class="btnTjly" type="submit" name="submit" value="提交您的订购信息" />
+            </li>
+          </form>
+        </ul>
+      </div>
   <!--底部的开始--> 
   {dede:include filename="footer_m.htm"/} 
   <!--底部的结束-->
@@ -32,4 +69,14 @@
 <!--顶部右侧点击向左移动js-->
 <script type="text/javascript" src="/m/style/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/m/style/js/menu.js"></script>
+<script>
+        	$(function(){
+				$('.btnTjly').click(function(){
+					if($('#name').val()==''){alert('请填写联系人！'); return false;}
+					if($('#tel').val()==''){alert('请填写正确手机号码！'); return false;}
+					if($('#email').val()==''){alert('请填写正确电子邮箱！'); return false;}
+					if($('#content').val()==''){alert('请填写内容！'); return false;}
+				})
+			})
+        </script>
 </html>
