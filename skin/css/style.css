@@ -412,34 +412,6 @@ p sup {
 	font-size: 24px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
-.sub-dropdown {
-  position: absolute;
-  z-index: 10000;
-  display: none;
-  width: 210px;
-  border: 1px solid #e2e2e2;
-  background-color: white;
-}
-
-.sub-dropdown li a {
-	padding: 0 10px;
-	margin: 0 6px;
-	display: block;
-	height: 37px;
-	line-height: 37px;
-	border-bottom: 1px dotted #b2bcc8;
-	font-size: 13px;
-	color: #333;
-	text-decoration: none;
-}
-.sub-dropdown li:hover, .cpMu li.cur {
-	background-color: #546a85;
-}
-.sub-dropdown li:hover a, .cpMu li.cur a {
-	color: #fff;
-}
-
 .abouts {
 	padding: 10px;
 	border: 1px solid #ccc;
@@ -6452,3 +6424,50 @@ select {
 .pagess ul li.thisclass a {color: #fff;}
 .pagess ul li a{ display:block;color:#999}
 .pagess ul li a:hover {color: #fff;}
+
+.sub-dropdown {
+  position: absolute;
+  z-index: 10000;
+  display: none;
+  border: 1px solid #e2e2e2;
+  background-color: white;
+  padding: 10px;
+}
+
+.sub-dropdown li {
+    width: 115px;
+}
+
+.sub-dropdown .img-container {
+    width: 88px;
+    height: 40px;
+    border: 1px solid #b2bcc8;
+}
+
+.sub-dropdown .brand-title {
+    height: 30px;
+    line-height: 30px;
+}
+
+.sub-dropdown li a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-dropdown li:hover, .cpMu li.cur {
+    /*background-color: #546a85;*/
+}
+.sub-dropdown li:hover a, .cpMu li.cur a {
+    color: #205cad;
+}
+.sub-dropdown .dropdown-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 580px;
+}
