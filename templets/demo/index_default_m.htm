@@ -16,7 +16,18 @@
   
   <!--主题内容的开始-->
   <div class="zymain">
-    <div class="zybtmenu"> {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} <a href="list.php?tid=[field:id/]">[field:typename/]</a> {/dede:channel} </div>
+    <!--<div class="zybtmenu"> 
+      {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} 
+      <a href="list.php?tid=[field:id/]">[field:typename/]</a> 
+      {/dede:channel} 
+    </div>-->
+    <div class="lnav">
+      <ul>
+        {dede:channel type='son' row='10' currentstyle="<li><a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a></li>"} 
+        <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+    </div>
     <div class="zy_nr"> {dede:field.content/} </div>
   </div>
   <!--主题内容的结束--> 
