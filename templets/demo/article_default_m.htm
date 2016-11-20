@@ -37,7 +37,7 @@
   <!--主题内容的结束--> 
   <!-- 在线留言 -->
    
-      <div class="dgxxBox" id="caigou">
+      <div class="dgxxBox mobile-message" id="caigou">
         <p> 订购：{dede:field.title/}</p>
         
         <ul class="m_form clearfix" id="tbForm1">
@@ -45,9 +45,6 @@
             <input type="hidden" name="action" value="post" />
             <input type="hidden" name="diyid" value="2" />
             <input type="hidden" name="do" value="2" />
-            <li class="areLi">
-              <textarea class="txtAre" type='text' name='content' id='content' placeholder="请填写订购的产品数量和产品描述，方便我们进行统一备货"></textarea>
-            </li>
             <li class="clearfix">
               <label> 联 系 人</label>
               <input class="iptTxt" type='text' name='name' id='name' placeholder="请填写联系人"/>
@@ -59,6 +56,9 @@
             <li class="clearfix">
               <label> 电子邮件</label>
               <input class="iptTxt" type='text' name='email' id='email' placeholder="请填写正确电子邮箱" />
+            </li>
+            <li class="areLi">
+              <textarea class="txtAre" type='text' name='content' id='content' placeholder="请填写订购的产品数量和产品描述，方便我们进行统一备货"></textarea>
             </li>
             <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,text" />
             <input type="hidden" name="dede_fieldshash" value="877b0484352c0bb6689972090e73d6d9" />

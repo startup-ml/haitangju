@@ -6471,3 +6471,34 @@ select {
     flex-wrap: wrap;
     width: 580px;
 }
+
+.mobile-message {
+	display: inline-block;
+	height: auto;
+}
+
+.mobile-message form {
+	display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-message .m_form li {
+	display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-message .m_form label {
+	height: 38px;
+	line-height: 38px;
+}
+
+.mobile-message .m_form .txtAre {
+	width: 306px;
+	margin-left: 0;
+}
+
+.mobile-message .m_form .areLi {
+	height: auto;
+}
