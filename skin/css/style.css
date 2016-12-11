@@ -6453,8 +6453,12 @@ select {
     font-size: 12px;
     color: #333;
     text-decoration: none;
-    display: flex;
-    display: -webkit-flex;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: column;
     align-items: center;
 }
@@ -6463,8 +6467,12 @@ select {
     color: #205cad;
 }
 .sub-dropdown .dropdown-container {
-    display: -webkit-flex;
-    display: flex;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: row;
     flex-wrap: wrap;
     width: 580px;
@@ -6476,14 +6484,22 @@ select {
 }
 
 .mobile-message form {
-	display: -webkit-flex;
-    display: flex;
+	display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: column;
 }
 
 .mobile-message .m_form li {
-	display: -webkit-flex;
-    display: flex;
+	display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: row;
 }
 

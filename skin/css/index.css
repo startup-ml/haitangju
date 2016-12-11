@@ -847,6 +847,7 @@ height:;
 }
 
 .sub-dropdown {
+  transition: initial;
   position: absolute;
   z-index: 10000;
   display: none;
@@ -874,8 +875,12 @@ height:;
     font-size: 12px;
     color: #333;
     text-decoration: none;
-    display: flex;
-    display: -webkit-flex;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: column;
     align-items: center;
 }
@@ -883,22 +888,89 @@ height:;
     /*background-color: #546a85;*/
 }
 .sub-dropdown li:hover a, .cpMu li.cur a {
-    color: #205cad;
+    color: #3498db;
+    transition: initial;
 }
 .sub-dropdown .dropdown-container {
-    display: -webkit-flex;
-    display: flex;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: row;
     flex-wrap: wrap;
     width: 580px;
 }
 
 .brand-area {
-    display: -webkit-flex;
-    display: flex;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-direction: row;
     flex-wrap: wrap;
 }
 .brand-area li {
     width: auto;
+}
+
+.hot-product-container {
+    margin-bottom: 0;
+}
+
+.hot-product-area {
+    overflow: hidden;
+    position: relative;
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    height: 184px;
+}
+
+.hot-product-container dl {
+    margin: 10px;
+    text-align: center;
+}
+
+#carousel-panel1, #carousel-panel2 {
+    display: box;			  /* OLD - Android 4.4- */
+	display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	  /* TWEENER - IE 10 */
+	display: -webkit-flex;	 /* NEW - Chrome */
+	display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    position: absolute;
+}
+
+
+#carousel-panel1 {
+    left: 0;
+     animation: mymove 3s infinite;
+    -moz-animation: mymove 3s infinite; /* Firefox */
+    -webkit-animation: mymove 3s infinite; /* Safari and Chrome */
+    -o-animation: mymove 3s infinite; /* Opera */
+}
+@keyframes mymove
+{
+0%   {left: 0;}
+100%   {left: -1000px;}
+}
+
+#carousel-panel2 {
+    left: 1000px;
+    animation: mymove2 3s infinite;
+    -moz-animation: mymove2 3s infinite; /* Firefox */
+    -webkit-animation: mymove2 3s infinite; /* Safari and Chrome */
+    -o-animation: mymove2 3s infinite; /* Opera */
+}
+@keyframes mymove2
+{
+0%   {left: 1000px;}
+100%   {left: 0;}
 }

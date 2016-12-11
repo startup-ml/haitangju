@@ -39,6 +39,48 @@
       {/dede:channel}
     </ul>
   </div>
+  <div class="gdn container hot-product-container">
+    <h4 class="contTit"> 
+      <span class="titA">热门产品</span>
+    </h4>
+    <div class="cpListCont hot-product-area"> 
+      <div id="carousel-panel1">
+          {dede:arclist typeid='1' row='15' titlelen='50' orderby='hot' limit='0,5'}
+            <dl>
+              <dt><a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]" title="[field:title/]"
+                                width="180" height="150"></a></dt>
+              <dd>
+                <h5> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h5>
+              </dd>
+            </dl>
+          {/dede:arclist} 
+      </div>
+      <div id="carousel-panel2">
+          {dede:arclist typeid='1' row='15' titlelen='50' orderby='hot' limit='5,5'}
+            <dl>
+              <dt><a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]" title="[field:title/]"
+                                width="180" height="150"></a></dt>
+              <dd>
+                <h5> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h5>
+              </dd>
+            </dl>
+          {/dede:arclist} 
+      </div>
+      <!--<div id="carousel-panel3">
+          {dede:arclist typeid='1' row='15' titlelen='50' orderby='hot' limit='10,5'}
+            <dl>
+              <dt><a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]" title="[field:title/]"
+                                width="180" height="150"></a></dt>
+              <dd>
+                <h5> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h5>
+              </dd>
+            </dl>
+          {/dede:arclist} 
+      </div>-->
+    </div>
+</div>
+    
+  </div>
   <div class="search container">
     <div class="searchBox">
       <form  name="formsearch" action="/plus/search.php">
