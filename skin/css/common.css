@@ -145,25 +145,21 @@ p {
 .right_main {
 	width: 762px;
 	min-height: 458px;
-	border: solid 1px #d5d5d5;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #fff;
+	background: #ededed;
 }
 .right2_main {
 	width: 273px;
-	border: solid 1px #d5d5d5;
-	border-top: 0;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #fff
+	background: #ededed
 }
 .left2_main {
 	width: 688px;
-	border: solid 1px #d5d5d5;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #fff;
+	background: #ededed;
 }
  .h_nav li a:-webkit-any-link {
 display:block;
@@ -203,9 +199,15 @@ display:block;
 }
 .hd_cont .hd_logo {
 	position: absolute;
-	left: 0;
-	top: 10px;
+	left: -22px;
+    top: 16px;
 }
+
+.hd_cont .hd_logo .fl img {
+	width: 300px;
+    height: 88px;
+}
+
 .hd_cont .hd_logo dd {
 	margin-left: 35px;
 	padding-top: 25px;
@@ -231,8 +233,7 @@ display:block;
 .hd_cont .dh_phone {
 	padding-top: 4px;
 	padding-left: 36px;
-	margin-top: 40px;
-	background: url(../images/hdphoen_ico.png) no-repeat left center;
+	margin-top: 30px;
 	color: #a1a1a1;
 }
 .hd_cont .dh_phone dd {

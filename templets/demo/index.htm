@@ -28,8 +28,8 @@
     <script type="text/javascript" src="/skin/js/flash.js"></script> 
   </div>
 </div>
-<div class="mainContent">
-  <div class="gdn container">
+<!--<div class="mainContent">-->
+  <!--<div class="gdn container">
     <h4 class="contTit"> 
       <span class="titA">代理品牌</span>
     </h4>
@@ -38,8 +38,8 @@
       <li><a href="[field:typeurl/]"><img src="[field:typelitpic/]" width="126" height="56"/></a></li>
       {/dede:channel}
     </ul>
-  </div>
-  <div class="gdn container hot-product-container">
+  </div>-->
+  <!--<div class="gdn container hot-product-container">
     <h4 class="contTit"> 
       <span class="titA">热门产品</span>
     </h4>
@@ -66,21 +66,10 @@
             </dl>
           {/dede:arclist} 
       </div>
-      <!--<div id="carousel-panel3">
-          {dede:arclist typeid='1' row='15' titlelen='50' orderby='hot' limit='10,5'}
-            <dl>
-              <dt><a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]" title="[field:title/]"
-                                width="180" height="150"></a></dt>
-              <dd>
-                <h5> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h5>
-              </dd>
-            </dl>
-          {/dede:arclist} 
-      </div>-->
     </div>
-</div>
+</div>-->
     
-  </div>
+  <!--</div>-->
   <div class="search container">
     <div class="searchBox">
       <form  name="formsearch" action="/plus/search.php">
@@ -106,7 +95,17 @@
       </div>
     </div>
     <div class="cpList fr">
-      <h4> {dede:type typeid='1'} <a href="[field:typelink/]"> 推荐产品</a>{/dede:type}</h4>
+      <h4> 
+        {dede:type typeid='1'} 
+          <a href="[field:typelink/]"> 
+            <span class="left-text">热销推荐</span> / <span class="right-text">HOT PRODUCTS</span>
+          </a>
+
+          <span class="more-pro">
+            <a href="[field:typelink/]">更多 >></a>
+          </span>
+        {/dede:type}
+      </h4>
       <div class="cpListCont"> {dede:arclist typeid='1' row='12' titlelen='50' orderby='pubdate'}
         <dl>
           <dt><a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]" title="[field:title/]"

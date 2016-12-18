@@ -52,7 +52,7 @@
 /*搜索*/
 .search {
     position: relative;
-    background: #FFF;
+    background: #ededed;
     height: 90px;
     overflow: hidden;
 }
@@ -187,7 +187,7 @@ height:;
     margin-bottom: 22px;
     padding-top: 10px;
     height: 644px;
-    background-color: #fff;
+    background-color: #ededed;
     overflow: hidden;
 }
 .cpMu {
@@ -230,7 +230,6 @@ height:;
 .cpMuCont {
     margin-top: 2px;
     padding-bottom: 12px;
-    border: 1px solid #e2e2e2;
 }
 .cpMuCont p {
     margin: 16px 8px;
@@ -253,15 +252,26 @@ height:;
     width: 760px;
     overflow: hidden;
 }
+.cpList .left-text {
+    font-size: 16px;
+}
+.cpList .right-text {
+    font-size: 12px;
+    font-weight: normal;
+}
+.cpList .more-pro {
+    float: right;
+}
 .cpList h4 {
-    margin: 8px 0;
+    padding: 8px 0 10px 0;
+    margin-right: 12px;
     height: 38px;
     line-height: 38px;
-    background: url(../images/conttitbg2.png) no-repeat left center;
+    background: url(../images/conttitbg.png) no-repeat left center;
 }
 .cpList h4 a {
     margin-left: 18px;
-    color: #546a85;
+    color: #3498db;
 }
 .cpListCont {
 }
@@ -467,8 +477,7 @@ height:;
 /*海普润机械更懂您*/
 .gdn {
     margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
     margin-top: 24px;
 }
 .gdn ul {
@@ -485,7 +494,6 @@ height:;
 }
 .gdn li img {
     padding: 4px;
-    border: 1px solid #d2d2d2;
 }
 .gdn li h5 {
     margin-top: 12px;
@@ -501,8 +509,7 @@ height:;
 .khjz {
     width: 676px;
     height: 476px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
 }
 .khjz .khCont {
     margin-top: 16px;
@@ -539,8 +546,7 @@ height:;
 .tdBox {
     width: 306px;
     height: 476px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
 }
 .tdBox ul {
     margin: 10px auto;
@@ -587,8 +593,7 @@ height:;
 .gyBox {
     width: 676px;
     height: 486px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
 }
 .gyCont {
 }
@@ -653,8 +658,7 @@ height:;
 .wtjd {
     width: 306px;
     height: 486px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
 }
 .wtjdCont {
     margin-top: 26px;
@@ -702,8 +706,7 @@ height:;
 .dtBox {
     width: 418px;
     height: 378px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ededed;
 }
 .dtTab {
     overflow: hidden;
@@ -772,7 +775,6 @@ height:;
 .lyBox {
     width: 566px;
     height: 378px;
-    border: 1px solid #ddd;
     background: #fff url(../images/lyboxbg.jpg) no-repeat right 57px;
 }
 .lyCont {
@@ -798,10 +800,10 @@ height:;
     float: left;
     width: 36px;
     height: 30px;
-    border: 1px solid #546a85;
+    border: 1px solid #ccc;
     border-right-width: 0;
     text-align: center;
-    background-color: #546a85;
+    background-color: lightgrey;
 }
 .lyCont .m_form .areLi label {
     height: 104px;
@@ -813,29 +815,23 @@ height:;
 .lyCont .m_form .iptTxt {
     float: left;
     width: 290px;
-    border: 1px solid #546a85;
+    border: 1px solid #ccc;
     height: 14px;
     line-height: 14px;
     padding: 8px 10px;
     outline: none;
-    color: #fff;
-    background-color: #546a85;
     font-family: microsoft yahei;
-    border-left-color: #63768e;
 }
 .lyCont .m_form .txtAre {
     float: left;
     width: 290px;
     height: 94px;
     line-height: 20px;
-    border: 1px solid #546a85;
+    border: 1px solid #ccc;
     outline: none;
     resize: none;
-    color: #fff;
     padding: 5px 10px;
-    background-color: #546a85;
     font-family: microsoft yahei;
-    border-left-color: #63768e;
 }
 .lyCont .m_form .btnSubmit {
     margin-top: 8px;
