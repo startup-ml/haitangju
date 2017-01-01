@@ -1913,7 +1913,8 @@ dl.t05_con_dl dd {
 	padding: 0 18px;
 	height: 35px;
 	line-height: 35px;
-	background: url(../images/conttitbg2.png) no-repeat left center;
+	border-bottom: #3498db 2px solid;
+	/*background: url(../images/conttitbg2.png) no-repeat left center;*/
 } /*产品列表页，面包屑导航,字体颜色可自行修改*/
 .pro_curmbs span {
 	color: #008CE1;
@@ -1957,12 +1958,15 @@ dl.t05_con_dl dd {
 	display: block;
 	border: 1px solid #e5e5e5;
 }
+.p_list_dl dt img:hover {
+	border: 1px solid #008CE1;
+}
+
 .p_list_dl dd {
 	height: 35px;
 	overflow: hidden;
 }
 .p_list_dl dd h5 {
-	font-size: 14px;
 	line-height: 35px;
 	text-align: center;
 }

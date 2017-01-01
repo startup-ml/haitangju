@@ -23,11 +23,16 @@
     <ul class="container">
       <li class='home'><a class="navHome" href="/">网站首页</a></li>
       {dede:channel type='top' currentstyle="
+        <li><a href='~typelink~' class='cur'>~typename~</a></li>
+        "}
+        <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+      {/dede:channel}
+      <!--{dede:channel type='top' currentstyle="
         <li onmouseenter='onNavMouseEnter(this, ~id~, event)' onmouseleave='onNavMouseLeave(this, ~id~, event)'><a href='~typelink~' class='cur'>~typename~</a></li>
         "}
         <li onmouseenter="onNavMouseEnter(this, [field:id/], event)" onmouseleave="onNavMouseLeave(this, [field:id/], event)"><a href="[field:typeurl/]">[field:typename/]</a></li>
-      {/dede:channel}
-       <div class="sub-dropdown" onmouseleave="onDropdownMouseLeave(this, event)">
+      {/dede:channel}-->
+       <!--<div class="sub-dropdown" onmouseleave="onDropdownMouseLeave(this, event)">
          <div class="dropdown-container">
             {dede:channel type='son' typeid='1'}
               <ul>
@@ -40,12 +45,12 @@
               </ul>
             {/dede:channel}
          </div>
-       </div>
+       </div>-->
     </ul>
   </div>
 </div>
 
-<script>
+<!--<script>
   function onNavMouseEnter(ele, id, event) {
       if (id == 1 && $(ele).parent().children(".sub-dropdown").children().length > 0) {
           var offset = $(ele).offset();
@@ -72,4 +77,4 @@
       $(ele).parent().children(".sub-dropdown").slideToggle();
     }
   }
-</script>
+</script>-->

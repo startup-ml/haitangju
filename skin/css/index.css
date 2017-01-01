@@ -267,7 +267,8 @@ height:;
     margin-right: 12px;
     height: 38px;
     line-height: 38px;
-    background: url(../images/conttitbg.png) no-repeat left center;
+    border-bottom: #3498db 2px solid;
+    /*background: url(../images/conttitbg.png) no-repeat left center;*/
 }
 .cpList h4 a {
     margin-left: 18px;
@@ -331,7 +332,8 @@ height:;
     margin: 11px;
     height: 38px;
     line-height: 38px;
-    background: url(../images/conttitbg2.png) no-repeat left center;
+    border-bottom: #3498db 2px solid;
+    /*background: url(../images/conttitbg2.png) no-repeat left center;*/
 }
 .hzhb h4 a {
     margin-left: 18px;
@@ -352,7 +354,8 @@ height:;
 .ysBox {
     position: relative;
     height: 450px;
-    background: url(../images/ysboxbg.jpg) no-repeat center;
+    background: url(../images/ysboxbg.jpg) center;
+    width: 100%;
 }
 .ysBox dl {
     position: absolute;
@@ -388,19 +391,19 @@ height:;
     color: #ff5a00;
 }
 .ysBox .ys01 {
-    left: 100px;
+    left: 200px;
     top: 66px;
 }
 .ysBox .ys02 {
-    left: 760px;
+    right: 140px;
     top: 66px;
 }
 .ysBox .ys03 {
-    left: 100px;
+    left: 200px;
     top: 232px;
 }
 .ysBox .ys04 {
-    left: 760px;
+    right: 140px;
     top: 232px;
 }
 .slGgl {
@@ -461,7 +464,8 @@ height:;
     position: relative;
     height: 56px;
     line-height: 56px;
-    background: url(../images/conttitbg.png) no-repeat left center;
+    border-bottom: #3498db 2px solid;
+    /*background: url(../images/conttitbg.png) no-repeat left center;*/
 }
 .contTit .titA {
     margin-left: 18px;
@@ -727,7 +731,8 @@ height:;
     text-align: center;
 }
 .dtTab span.cur, .dtTab span:hover {
-    background: url(../images/conttitbg.png) no-repeat left center;
+    border-bottom: #3498db 2px solid;
+    /*background: url(../images/conttitbg.png) no-repeat left center;*/
 }
 .dtBox dl {
     margin: 14px;
