@@ -285,13 +285,16 @@ height:;
     display: block;
     border: 1px solid #e5e5e5;
 }
+.cpList dl dt img:hover {
+    border: 1px solid #008CE1;
+}
 .cpList dl dd {
     height: 30px;
     overflow: hidden;
     text-align: center
 }
 .cpList dl dd h5 {
-    font-size: 14px;
+    font-size: 12px;
     height: 30px;
     line-height: 30px;
 }

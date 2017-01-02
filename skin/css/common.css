@@ -210,9 +210,18 @@ display:block;
 }
 
 .hd_cont .hd_logo dd {
-	margin-left: 35px;
-	padding-top: 25px;
+	padding-left: 23px;
+    margin-top: 25px;
+    border-left: #1D76B1 2px solid;
+    font-size: 16px;
+    height: 50px;
+    font-weight: bold;
+    color: #1D76B1;
 }
+.hd_cont .hd_logo dd .logo-des {
+	margin-top: 4px;
+}
+
 .hd_cont .hd_logo dd h2 {
 	font-size: 20px;
 	line-height: 30px;
@@ -266,7 +275,8 @@ display:block;
 	padding: 0 32px;
 	height: 42px;
 	line-height: 42px;
-	font-size: 14px;
+	font-size: 13px;
+	font-weight: bold;
 	color: #fff;
 	font-family: microsoft yahei;
 	text-decoration: none;
