@@ -149,7 +149,7 @@
       {/dede:arclist}
     </ul>
   </div>
-  <div class="ktSpan container">
+  <!--<div class="ktSpan container">
     <div class="khjz fl">
       <h4 class="contTit"> {dede:type typeid='39'} <a class="titA" href="[field:typelink/]">[field:typename/]</a>{/dede:type}{dede:type typeid='39'} <a class="titMore" href="[field:typelink/]">更多</a>{/dede:type}</h4>
       <div class="khCont"> {dede:arclist typeid='39' row='2' titlelen='50' orderby='pubdate'}
@@ -175,12 +175,20 @@
       </ul>
     </div>
     <div class="clear"> </div>
-  </div>
+  </div>-->
   <!-- 广告栏 -->
   <div class="ggl container"> <img src="/skin/images/gglimg.jpg" alt="" /> <span> {dede:global.cfg_tel/}</span> </div>
   <div class="gcSpan container">
     <div class="gyBox fl">
-      <h4 class="contTit"> {dede:type typeid='25'} <a class="titA" href="[field:typelink/]">[field:typename/]</a>{/dede:type}</h4>
+      <div class="tl-w">
+        <h3>{dede:type typeid='25'}[field:typename/]{/dede:type}</h3>
+        <p>ABOUT US</p>
+        <span>
+          {dede:type typeid='25'} <a class="titA" href="[field:typelink/]">MORE+</a>{/dede:type}
+          <!--<a href="/article/customer.html">MORE+</a>-->
+        </span>
+      </div>
+      <!--<h4 class="contTit"> {dede:type typeid='25'} <a class="titA" href="[field:typelink/]">[field:typename/]</a>{/dede:type}</h4>-->
       <div class="gyCont">
         <dl>
           <dt class="fl"> <img src="/skin/images/20150528151454_94670.jpg" alt="关于我们" width="282" height="206" /></dt>
@@ -204,7 +212,13 @@
       </div>
     </div>
     <div class="wtjd fr">
-      <h4 class="contTit"> {dede:type typeid='37'} <a class="titA" href="[field:typelink/]"> [field:typename/]</a>{/dede:type} </h4>
+      <div class="tit-faq">
+   	    <h3>{dede:type typeid='37'}[field:typename/]{/dede:type}</h3>
+   	    <span>
+           {dede:type typeid='37'} <a class="titA" href="[field:typelink/]">MORE+</a>{/dede:type}
+        </span>
+      </div>
+      <!--<h4 class="contTit"> {dede:type typeid='37'} <a class="titA" href="[field:typelink/]"> [field:typename/]</a>{/dede:type} </h4>-->
       <div class="wtjdCont">
         <div id="faq"> {dede:arclist typeid='37' row=6 infolen='200' titlelen=60}
           <dl>
@@ -270,7 +284,8 @@
     
     <!-- 在线留言 -->
     <div class="lyBox fr" id="liuyan">
-      <h4 class="contTit"> <a class="titA">在线留言</a></h4>
+      <!--<h4 class="contTit"> <a class="titA">在线留言</a></h4>-->
+      <h4 class="contTit">在线留言</h4>
       <script>
         	$(function(){
 				$('.btnSubmit').click(function(){

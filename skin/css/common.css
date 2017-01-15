@@ -5,7 +5,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-	background-color: #ededed;
+	/*background-color: #ededed;*/
 	color: #666;
 	font-size: 12px;
 	font-family: microsoft yahei, "宋体";
@@ -147,19 +147,19 @@ p {
 	min-height: 458px;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #ededed;
+	/*background: #ededed;*/
 }
 .right2_main {
 	width: 273px;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #ededed
+	/*background: #ededed*/
 }
 .left2_main {
 	width: 688px;
 	padding-bottom: 15px;
 	overflow: hidden;
-	background: #ededed;
+	/*background: #ededed;*/
 }
  .h_nav li a:-webkit-any-link {
 display:block;

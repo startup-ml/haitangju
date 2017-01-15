@@ -394,7 +394,7 @@ p sup {
 .cpMuCont {
 	margin-top: 2px;
 	padding-bottom: 12px;
-	background-color: #ededed;
+	/*background-color: #ededed;*/
 }
 .cpMuCont p {
 	margin: 16px 8px;
@@ -451,7 +451,8 @@ p sup {
 	color: #fff;
 }
 .contactn .subnr {
-	background: none repeat scroll 0 0 #ededed;
+	/*background: none repeat scroll 0 0 #ededed;*/
+	background: none repeat scroll 0 0 white;
 	overflow: hidden;
 	padding: 5px 9px;
 	width: 190px;
@@ -546,13 +547,15 @@ p sup {
 	padding-left: 12px;
 }
 .right .RandomNews .news_random {
-	background: #ededed;
+	/*background: #ededed;*/
+	background: white;
 }
 .right .RandomNews ul {
 	padding-top: 8px;
 	margin-bottom: 15px;
 	width: 764px;
-	background: #ededed;
+	background: white;
+	/*background: #ededed;*/
 }
 dl.product_dl_commend {
 	width: 166px;
@@ -1515,7 +1518,7 @@ ul.n_rt_ul2 li {
 .pro_main {
 	zoom: 1;
 	padding: 10px 5px;
-	background-color: #ededed;
+	/*background-color: #ededed;*/
 }
 .t05 {
 	background: #008CE1;
@@ -1554,7 +1557,7 @@ ul.n_rt_ul2 li {
 	padding: 2px 10px;
 	margin-bottom: 10px;
 	zoom: 1;
-	background: #ededed;
+	/*background: #ededed;*/
 }
 .t05_cons1 li {
 	background: url("../images/ico27.gif") no-repeat scroll 0 10px transparent;
@@ -4542,7 +4545,7 @@ ul.p_bank_ul2 li {
 }
 /*邮件发送分享*/
 .send_news h4 {
-	background: #ededed;
+	/*background: #ededed;*/
 	height: 28px;
 	line-height: 28px;
 	padding-left: 10px;
@@ -6137,7 +6140,7 @@ select {
 	width: 682px;
 	height: 28px;
 	line-height: 28px;
-	background: #EDEDED;
+	/*background: #EDEDED;*/
 }
 .pei .tit h4 {
 	float: left;
