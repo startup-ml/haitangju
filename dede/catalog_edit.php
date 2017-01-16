@@ -59,7 +59,8 @@ if($dopost=="save")
      `cross`='$cross',
      `content`='$content',
      `crossid`='$crossid',
-     `smalltypes`='$smalltypes'
+     `smalltypes`='$smalltypes',
+	 `typelitpic`='$typelitpic'
      $uptopsql
     WHERE id='$id' ";
 
