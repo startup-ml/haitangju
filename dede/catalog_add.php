@@ -226,7 +226,7 @@ else if($dopost=='save')
     
     $in_query = "INSERT INTO `#@__arctype`(reid,topid,sortrank,typename,typedir,typelitpic,isdefault,defaultname,issend,channeltype,
     tempindex,templist,temparticle,modname,namerule,namerule2,
-    ispart,corank,description,keywords,seotitle,moresite,siteurl,sitepath,ishidden,`cross`,`crossid`,`content`,`smalltypes`,)
+    ispart,corank,description,keywords,seotitle,moresite,siteurl,sitepath,ishidden,`cross`,`crossid`,`content`,`smalltypes`)
     VALUES('$reid','$topid','$sortrank','$typename','$typedir','$typelitpic','$isdefault','$defaultname','$issend','$channeltype',
     '$tempindex','$templist','$temparticle','default','$namerule','$namerule2',
     '$ispart','$corank','$description','$keywords','$seotitle','$moresite','$siteurl','$sitepath','$ishidden','$cross','$crossid','$content','$smalltypes')";
