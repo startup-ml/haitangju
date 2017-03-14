@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
 <title>栏目管理</title>
 <link href="css/base.css" rel="stylesheet" type="text/css">
+<script language='javascript' src="js/main.js"></script>
 <script language="javascript">
 var channelArray = new Array();
 <?php    
@@ -213,6 +214,13 @@ function CheckCross()
             <td class='bline' height="26" style="padding-left:10px;"><font color='red'>栏目名称：</font></td>
             <td class='bline'><input name="typename" type="text" id="typename" size="30" value="<?php echo $myrow['typename']?>" class="iptxt" /></td>
           </tr>
+		  <tr>         
+			<td class='bline' height="26" style="padding-left:10px;">栏目图标：</td>
+			<td class='bline'>
+				<input name="typelitpic" type="text" id="typelitpic" size="30" value="<?php echo $myrow['typelitpic']?>" class="iptxt" />
+				<input type="button" name="Submit2" value="站内选择" style="margin-left:8px;" onClick="SelectImage('form1.typelitpic','small');" class='np coolbg'/> 
+			</td>
+		  </tr>
           <tr> 
             <td class='bline' height="26" style="padding-left:10px;"> 排列顺序： </td>
             <td class='bline'> <input name="sortrank" size="6" type="text" value="<?php echo $myrow['sortrank']?>" class="iptxt" />

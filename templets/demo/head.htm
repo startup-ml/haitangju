@@ -6,27 +6,75 @@
     <dl class="hd_logo">
       <dt class="fl">
         <a href="/"> 
-          <img src="/skin/images/logo.jpg" alt="{dede:global.cfg_webname/}" />
+          <img src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}" />
         </a>
       </dt>
       <dd class="fl">
-        <h3>{dede:global.cfg_company_name/}</h3>
-        <h3>全球真空方案解决者!</h3>
+        <!--<h3>{dede:global.cfg_company_name/}</h3>-->
+        <div class="logo-des">缔造通风工程第一品牌</br>
+        品质成就安全 专业引领未来！</div>
       </dd>
     </dl>
     <dl class="dh_phone fr">
-      <dt>全国统一服务热线</dt>
-      <dd> {dede:global.cfg_tel/}</dd>
+      <img src="/skin/images/tel.png" alt="联系电话" />
     </dl>
   </div>
   <div class="dh_nav">
     <ul class="container">
       <li class='home'><a class="navHome" href="/">网站首页</a></li>
       {dede:channel type='top' currentstyle="
-      <li><a href='~typelink~' class='cur'>~typename~</a></li>
-      "}
-      <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+        <li><a href='~typelink~' class='cur'>~typename~</a></li>
+        "}
+        <li><a href="[field:typeurl/]">[field:typename/]</a></li>
       {/dede:channel}
+      <!--{dede:channel type='top' currentstyle="
+        <li onmouseenter='onNavMouseEnter(this, ~id~, event)' onmouseleave='onNavMouseLeave(this, ~id~, event)'><a href='~typelink~' class='cur'>~typename~</a></li>
+        "}
+        <li onmouseenter="onNavMouseEnter(this, [field:id/], event)" onmouseleave="onNavMouseLeave(this, [field:id/], event)"><a href="[field:typeurl/]">[field:typename/]</a></li>
+      {/dede:channel}-->
+       <!--<div class="sub-dropdown" onmouseleave="onDropdownMouseLeave(this, event)">
+         <div class="dropdown-container">
+            {dede:channel type='son' typeid='1'}
+              <ul>
+                <li>
+                  <a href='[field:typeurl/]'>
+                    <span class="img-container"><img src="[field:typelitpic/]" width="88" height="40"/></span>
+                    <span class="brand-title">[field:typename/]</span>
+                  </a>
+                </li>
+              </ul>
+            {/dede:channel}
+         </div>
+       </div>-->
     </ul>
   </div>
 </div>
+
+<!--<script>
+  function onNavMouseEnter(ele, id, event) {
+      if (id == 1 && $(ele).parent().children(".sub-dropdown").children().length > 0) {
+          var offset = $(ele).offset();
+          $(ele).parent().children(".sub-dropdown").css({
+            'top': offset.top + 42 + 'px', 
+            'left': offset.left + 'px'
+            });
+
+          if (event.fromElement && event.fromElement.className !== "sub-dropdown") {
+            $(ele).parent().children(".sub-dropdown").slideToggle();
+          }
+      }
+  }
+
+  function onNavMouseLeave(ele, id, event) {
+      if (id == 1 && $(ele).parent().children(".sub-dropdown").children().length > 0 
+        && event.toElement && event.toElement.className !== "sub-dropdown") {
+          $(ele).parent().children(".sub-dropdown").slideToggle();
+      }
+  }
+
+  function onDropdownMouseLeave(ele, event) {
+    if (!(event.toElement && event.toElement.nodeName === "A" && event.toElement.innerHTML === '产品中心')) {
+      $(ele).parent().children(".sub-dropdown").slideToggle();
+    }
+  }
+</script>-->

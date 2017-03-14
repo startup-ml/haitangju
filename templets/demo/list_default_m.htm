@@ -16,7 +16,14 @@
   
   <!--主题内容的开始-->
   <div class="zymain">
-    <div class="zybtmenu"> {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} <a href="list.php?tid=[field:id/]">[field:typename/]</a> {/dede:channel} </div>
+    <div class="lnav">
+      <ul>
+        {dede:channel type='son' row='10' currentstyle="<li><a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a></li>"} 
+        <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+    </div>
+    <!--<div class="zybtmenu"> {dede:channel type='son' row='10' currentstyle="<a href='list.php?tid=~id~' class='now' ~rel~><span>~typename~</span></a>"} <a href="list.php?tid=[field:id/]">[field:typename/]</a> {/dede:channel} </div>-->
     <!--更换内容开始-->
     <div class="xwzx_nr">
       <ul>
@@ -34,7 +41,6 @@
     <div class="pages"> {dede:pagelist listitem="index,end,pageno" listsize="5"/} </div>
   </div>
   <!--主题内容的结束--> 
-  
   <!--底部的开始--> 
   {dede:include filename="footer_m.htm"/} 
   <!--底部的结束-->

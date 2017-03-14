@@ -78,8 +78,9 @@ img {
 
 .lnav {
 	width: 100%;
-	height: 150px;
+	height: auto;
 	background-color: #1571c8;
+	display: inline-block;
 }
 .lnav ul li {
 	width: 33.33%;
@@ -359,6 +360,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box
+}
+table, tbody, td, tfoot, th, thead, tr, tt {
+	border: initial;
 }
 html {
 	overflow-y: scroll
